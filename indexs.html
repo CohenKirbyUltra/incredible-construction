@@ -26,12 +26,30 @@
       </section>
       <br>
       <div>
-        <button id="modifications" onclick="window.alert('you should leave :)')">Modifications</button>
+        <button id="modifications" onclick="">Modifications</button>
         <button id="server">Salvation</button>
       </div>
       <footer>
         <h4>Incredible contruction; PROVIDING SALVATION</h4>
       </footer>
     </center>
+    <script>
+      var timestried;
+
+      document.getElementById("modifications").onclick = function() {
+          switch(timestried) {
+            case timestried < 3:
+              window.alert("you should leave :)")
+              break;
+            case timestried > 3 && timestried < 6:
+              window.alert("should leave :)")
+              break;
+            case timestried > 6 && timestried < 9:
+              window.alert("leave :)")
+              break;
+          }
+        timestried++
+      }
+    </script>
   </body>
 </html>
