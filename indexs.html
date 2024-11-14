@@ -37,18 +37,20 @@
       var timestried;
 
       document.getElementById("modifications").addEventListener("click", function (e) {
-          switch(timestried) {
-            case timestried < 3:
+          if (timestried < 3) {
               this.innerHTML = "you should leave :)";
               break;
-            case timestried > 3 && timestried < 6:
+          }
+          if (timestried > 3 && timestried < 6) {
               this.innerHTML = "should leave :)";
               break;
-            case timestried > 6 && timestried < 9:
+          }
+          if (timestried > 6 && timestried < 9) {
               this.innerHTML = "leave.";
               break;
           }
         timestried++
+        console.log(timestried);
       });
     </script>
   </body>
