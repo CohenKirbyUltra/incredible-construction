@@ -1,1 +1,44 @@
+html {
+  color: white;
+  background-color: #222222;
+}
 
+.container {
+  position: relative;
+  vertical-align: middle;
+  margin: auto;
+  background-color: #bbbbbb;
+}
+
+.top_right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 18px;
+}
+
+.top_left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font-size: 18px;
+}
+
+#server {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 18px;
+}
+
+#modifications {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font-size: 18px;
+}
+
+.icon {
+  border-color: #ffffff;
+  border-radius: 8px;
+}
