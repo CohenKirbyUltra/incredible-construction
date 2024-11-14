@@ -39,15 +39,12 @@
       document.getElementById("modifications").addEventListener("click", function (e) {
           if (timestried < 3) {
               this.innerHTML = "you should leave :)";
-              break;
           }
           if (timestried > 3 && timestried < 6) {
               this.innerHTML = "should leave :)";
-              break;
           }
           if (timestried > 6 && timestried < 9) {
               this.innerHTML = "leave.";
-              break;
           }
         timestried++
         console.log(timestried);
