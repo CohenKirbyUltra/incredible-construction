@@ -49,7 +49,7 @@
           if (timestried > 50) {
               this.disabled = true;
               document.querySelectorAll("p", "h1", "h2", "h3", "h4", "h5", "h6", "span", "a").forEach((element) => {
-                this.innerHTML = "It's too late to leave";
+                element.innerHTML = "It's too late to leave";
               });
               document.getElementById("frame").src = "imgs/uh oh.png";
           }
