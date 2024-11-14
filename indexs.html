@@ -26,7 +26,7 @@
       </section>
       <br>
       <div>
-        <button id="modifications" onclick="">Modifications</button>
+        <button id="modifications">Modifications</button>
         <button id="server">Salvation</button>
       </div>
       <footer>
@@ -36,20 +36,20 @@
     <script>
       var timestried;
 
-      document.getElementById("modifications").onclick = function() {
+      documents.getElementById("modifications").addEventListener("click", function (e) {
           switch(timestried) {
             case timestried < 3:
-              window.alert("you should leave :)")
+              this.innerHTML = "you should leave :)";
               break;
             case timestried > 3 && timestried < 6:
-              window.alert("should leave :)")
+              this.innerHTML = "should leave :)";
               break;
             case timestried > 6 && timestried < 9:
-              window.alert("leave :)")
+              this.innerHTML = "leave.";
               break;
           }
         timestried++
-      }
+      });
     </script>
   </body>
 </html>
