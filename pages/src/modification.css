@@ -1,13 +1,13 @@
 html {
   color: white;
-  background-color: #222222;
+  background-color: 222222;
 }
 
 .container {
   position: relative;
   vertical-align: middle;
   margin: auto;
-  background-color: #bbbbbb;
+  background-color: bbbbbb;
 }
 
 .top_right {
