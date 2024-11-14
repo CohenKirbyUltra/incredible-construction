@@ -10,6 +10,7 @@ header {
 .container {
   position: relative;
   vertical-align: middle;
+  margin: auto;
 }
 
 .top_right {
