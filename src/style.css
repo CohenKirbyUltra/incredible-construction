@@ -9,6 +9,7 @@ header {
 
 .container {
   position: relative;
+  vertical-align: middle;
 }
 
 .top_right {
