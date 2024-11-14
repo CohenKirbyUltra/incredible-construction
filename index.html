@@ -33,9 +33,14 @@
       <footer>
         <h4>Incredible contruction; PROVIDING SALVATION</h4>
       </footer>
-      <audio autoplay loop>
+      <audio autoplay loop id="audiothing">
           <source src="src/audio/lostandalone.mp3" type="audio/mpeg" />
       </audio>
+      <script>
+        document.addEventListener("click", function(){
+            document.getElementById("audiothing").play();
+        });
+      </script>
     </center>
   </body>
 </html>
