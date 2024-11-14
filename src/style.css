@@ -1,5 +1,5 @@
 body {
-  color: black;
+  color: white;
   background-color: #222222;
 }
 
@@ -11,6 +11,7 @@ header {
   position: relative;
   vertical-align: middle;
   margin: auto;
+  background-color: #bbbbbb;
 }
 
 .top_right {
