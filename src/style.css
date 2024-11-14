@@ -6,3 +6,21 @@ body {
 header {
   background-color: #bbbbbb;
 } 
+
+.container {
+  position: relative;
+}
+
+.top_right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 18px;
+}
+
+.top_left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font-size: 18px;
+}
