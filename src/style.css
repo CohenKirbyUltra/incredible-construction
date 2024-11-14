@@ -26,14 +26,14 @@ html {
 
 #server {
   position: absolute;
-  bottom: 8px;
+  margin: auto;
   right: 16px;
   font-size: 18px;
 }
 
 #modifications {
   position: absolute;
-  bottom: 8px;
+  margin: auto;
   left: 16px;
   font-size: 18px;
 }
