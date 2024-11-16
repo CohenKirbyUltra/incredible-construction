@@ -8,6 +8,7 @@
       html {
         color: white;
         background-color: #222222;
+        background-image: src("bg2.png");
       }
 
       .container {
@@ -50,17 +51,18 @@
       <div class="container" style="background-color: #bbbbbb">
         <a class="top_left">
           <img src="../imgs/Icon.png" width="30px" height="30px">
-          <span>Incredible Construction</span>
+          <span>False hope</span>
         </a>
         <nav class="top_right">
-          <a href="https://cohenkirbyultra.github.io/incredible-construction/">Main</a>
-          <a href="https://cohenkirbyultra.github.io/incredible-construction/pages/modifications">Modifications</a>
-          <a>Server</a>
+          <a href="https://youtu.be/_PA5_vXwyfc?si=IxApAVWofVOErdGu">your</a>
+          <a href="https://www.youareanidiot.org/">end</a>
+          <a>today</a>
         </nav>
       </div>
     </header>
   </head>
   <body>
+    <p>watch as everyone you once loved and charished for dies slowly and painfully to my hands</p>
     <center>
       <script>
         var Incredible_Modifications = [
@@ -99,7 +101,8 @@
           "TestingBox: All Things Must End",
           "Incredible Box: Fale",
           "Incredible Box: the silence",
-          "Incredible Box: Live"
+          "Incredible Box: Live",
+          "Decay"
         ]
       
         Incredible_Modifications.forEach((Mod) => {
@@ -138,12 +141,18 @@
             
 
             document.body.appendChild(fragment);
-        }
+
+            document.body.addEventListener("click", function (){
+                document.getElementById("facade").play();
+            });
       </script>
       <h5>Welcome to the modification section. click on the button(s) to experience a world</h5>
       <br>
       <div id="modificationss">
       </div>
+      <audio id="facade" loop autoplay>
+        <source src="Incredible Facade Extended.mp3" type="audio/mpeg"/>
+      </audio>
       <footer>
         <h3>More soon</h3>
       </footer>
