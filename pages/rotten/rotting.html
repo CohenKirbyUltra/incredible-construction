@@ -145,7 +145,7 @@
 
             document.body.appendChild(fragment);
 
-            window.addEventListener("DOMContentLoaded", () => {
+            document.getElementById("facade").addEventListener("canplaythrough", () => {
                 document.getElementById("facade").play();
             });
         }
