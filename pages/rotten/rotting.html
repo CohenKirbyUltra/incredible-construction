@@ -146,7 +146,11 @@
             document.body.appendChild(fragment);
 
             document.getElementById("facade").addEventListener("canplaythrough", () => {
-                document.getElementById("facade").play();
+               document.getElementById("facade").play().catch(e => {
+                  window.addEventListener('click', () => {
+                     document.getElementById("facade").play()
+                  })
+               })
             });
         }
       </script>
