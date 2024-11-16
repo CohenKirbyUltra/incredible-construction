@@ -1,0 +1,152 @@
+<html>
+  <head>
+    <style>
+      .documentitself {
+          height: 12000px;
+      }
+
+      html {
+        color: white;
+        background-color: #222222;
+      }
+
+      .container {
+        position: relative;
+        vertical-align: middle;
+        margin: auto;
+        background-color: #bbbbbb;
+      }
+      
+      .top_right {
+        position: absolute;
+        top: 8px;
+        right: 16px;
+        font-size: 18px;
+      }
+
+      .top_left {
+        position: absolute;
+        top: 8px;
+        left: 16px;
+        font-size: 18px;
+      }
+
+      #server {
+        position: absolute;
+        margin: auto;
+        right: 16px;
+        font-size: 18px;
+      }
+
+      #modifications {
+        position: absolute;
+        margin: auto;
+        left: 16px;
+        font-size: 18px;
+      }
+    </style>
+    <title>Incredible Construction</title>
+    <header>
+      <div class="container" style="background-color: #bbbbbb">
+        <a class="top_left">
+          <img src="../imgs/Icon.png" width="30px" height="30px">
+          <span>Incredible Construction</span>
+        </a>
+        <nav class="top_right">
+          <a href="https://cohenkirbyultra.github.io/incredible-construction/">Main</a>
+          <a href="https://cohenkirbyultra.github.io/incredible-construction/pages/modifications">Modifications</a>
+          <a>Server</a>
+        </nav>
+      </div>
+    </header>
+  </head>
+  <body>
+    <center>
+      <script>
+        var Incredible_Modifications = [
+          "Sprunki",
+          "Static",
+          "Polobox",
+          "Memorbox v1: Familiars",
+          "Memorbox v2: Flashback",
+          "Memorbox v3: Company",
+          "Memorbox v4: ABlaze",
+          "Memorbox v5: Revisit",
+          "Memorbox v6: Comedy",
+          "Memorbox v7",
+          "Memorbox v8",
+          "Memorbox v9",
+          "Memorbox v?: ???",
+          "Colorbox: Mustard",
+          "TestingBox V2: Feverdream",
+          "FiddleBop",
+          "Insomnia",
+          "Y-Box V1: In Between",
+          "Y-Box V2: Underneath",
+          "Y-Box V3: Insomnia",
+          "Y-Box V4: Crossing Paths",
+          "Y-Box V5",
+          "Y-Box VP: InnerPlexus",
+          "SepBox v9",
+          "Colorbox: Rainbow",
+          "RecBox V1",
+          "Dead Times",
+          "Curious",
+          "Orin ayo",
+          "Tragibox V3",
+          "Mustard 2: Ketching up",
+          "Incredipurge V1: The Collapse",
+          "TestingBox: All Things Must End",
+          "Incredible Box: Fale",
+          "Incredible Box: the silence",
+          "Incredible Box: Live"
+        ]
+      
+        Incredible_Modifications.forEach((Mod) => {
+            addIconText(Mod);
+        });
+                
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min) ) + min;
+        }
+        
+        function addIconText(spanText) {
+            // create a new div element
+            let ran = getRndInteger(-200, 200);
+            let rany = getRndInteger(-10, 10);
+            var newThing = document.createElement("img");
+            newThing.width = "60";
+            newThing.height = "60";
+            newThing.style.transform = "translate(" + ran + "px," + rany + "px)";
+            
+            const currentDiv = document.getElementById("modificationss");
+            
+            // and give it some content
+            var newSpan = document.createElement("h5");
+            newSpan.innerHTML = spanText;
+            newSpan.style.transform = "translate(" + ran + "px," + rany + "px)";
+            // add the text node to the newly created div
+            let breakage = document.createElement("BR");
+
+            const fragment = document.createDocumentFragment();
+            const li = fragment
+              .appendChild(document.createElement("center"));
+            
+            li.appendChild(newThing);
+            li.appendChild(breakage);
+            li.appendChild(newSpan);
+            
+
+            document.body.appendChild(fragment);
+        }
+      </script>
+      <h5>Welcome to the modification section. click on the button(s) to experience a world</h5>
+      <br>
+      <div id="modificationss">
+      </div>
+      <footer>
+        <h3>More soon</h3>
+      </footer>
+    </center>
+  </body>
+</html>
