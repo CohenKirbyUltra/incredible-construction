@@ -105,7 +105,7 @@
           "Incredible Box: Fale",
           "Incredible Box: the silence",
           "Incredible Box: Live",
-          "Decay"
+          "please try again later"
         ]
       
         Incredible_Modifications.forEach((Mod) => {
@@ -149,6 +149,12 @@
                 document.getElementById("facade").play()
             });
         }
+        setTimeout(() => {
+            let matches = document.querySelectorAll("body > *");
+            matches.forEach((item) => {
+                item.style.transform = "translate('0px, 10px')";
+            });      
+        }, 1000);
       </script>
       <h5>Welcome to the modification section. click on the button(s) to experience a world</h5>
       <br>
