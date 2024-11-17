@@ -106,20 +106,75 @@
           "Incredible Box: the silence",
           "Incredible Box: Live",
           "please try again later"
-        ]
+        ];
+
+        var modurl = [
+          "Sprunki",
+          "Static",
+          "Polobox",
+          "Memorbox v1: Familiars",
+          "https://spiteful1277.neocities.org/Memorbox%20V2%20Recovered%20File",
+          "Memorbox v3: Company",
+          "Memorbox v4: ABlaze",
+          "Memorbox v5: Revisit",
+          "Memorbox v6: Comedy",
+          "Memorbox v7",
+          "Memorbox v8",
+          "Memorbox v9",
+          "Memorbox v?: ???",
+          "Colorbox: Mustard",
+          "TestingBox V2: Feverdream",
+          "FiddleBop",
+          "Insomnia",
+          "Y-Box V1: In Between",
+          "Y-Box V2: Underneath",
+          "Y-Box V3: Insomnia",
+          "Y-Box V4: Crossing Paths",
+          "Y-Box V5",
+          "Y-Box VP: InnerPlexus",
+          "SepBox v9",
+          "Colorbox: Rainbow",
+          "RecBox V1",
+          "Dead Times",
+          "Curious",
+          "Orin ayo",
+          "Tragibox V3",
+          "Mustard 2: Ketching up",
+          "Incredipurge V1: The Collapse",
+          "TestingBox: All Things Must End",
+          "https://spiteful1277.neocities.org/Fale",
+          "Incredible Box: the silence",
+          "Incredible Box: Live",
+          "please try again later"
+        ];
+
+        var enabled = [
+          "Memorbox v2: Flashback",
+          "Incredible Box: Fale"
+        ];
       
-        Incredible_Modifications.forEach((Mod) => {
-            addIconText(Mod);
+        var index = 0;
+        Incredible_Modifications.forEach((element) => {
+            addIconText(element, checkmod(element), modurl[index]);
+            index++;
         });
                 
         function getRndInteger(min, max) {
           return Math.floor(Math.random() * (max - min) ) + min;
         }
         
-        function addIconText(spanText) {
+        function checkmod(modification) {
+          return (enabled.includes(modification));
+        }
+        
+        function addIconText(spanText, clickable, url) {
             // create a new div element
             let ran = getRndInteger(-200, 200);
             let rany = getRndInteger(-10, 10);
+            var newURL = document.createElement("a");
+            if (clickable === true) {
+                newURL.href = url;
+            }
             var newThing = document.createElement("img");
             newThing.src = "deada.png";
             newThing.width = "60";
@@ -137,22 +192,24 @@
 
             const fragment = document.createDocumentFragment();
             const li = fragment
+              .appendChild(newURL)
               .appendChild(document.createElement("center"));
             
             li.appendChild(newThing);
             li.appendChild(breakage);
-            li.appendChild(newSpan);   
+            li.appendChild(newSpan);
 
             document.body.appendChild(fragment);
           
             window.addEventListener('click', () => {
-                document.getElementById("facade").play()
+                document.getElementById("facade").play();
             });
         }
+
         setTimeout(() => {
-            let matches = document.querySelectorAll("body > *");
+            let matches = document.querySelectorAll("body > *, img, span");
             matches.forEach((item) => {
-                item.style.transform = "translate('0px, 10px')";
+                item.style.rotate = getRndInteger(-5, 5) + "deg";
             });      
         }, 1000);
       </script>
