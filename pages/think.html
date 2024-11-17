@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../src/style.css" />
+    <title>Think</title>
+    <header>
+      <div class="container" style="background-color: #bbbbbb">
+        <a class="top_left">
+          <img src="../imgs/Icon.png" width="30px" height="30px">
+          <span>Incredible Construction</span>
+        </a>
+        <nav class="top_right">
+          <a href="https://cohenkirbyultra.github.io/incredible-construction/">Main</a>
+          <a href="https://cohenkirbyultra.github.io/incredible-construction/pages/modifications">Modifications</a>
+          <a>Server</a>
+        </nav>
+      </div>
+    </header>
+  </head>
+  <body>
+    <center>
+      <input id="coder" placeholder="think"/>
+      <button id="submit">submit</button>
+      <script>
+        var codes = [
+          "fale"
+        ];
+        
+        document.getElementById("submit").addEventListener("click", submitsubmit);
+        
+        function submitsubmit() {
+          let value = document.getElementById("coder").value;
+          
+          switch (value) {
+            case codes[0]:
+              window.location.replace("https://spiteful1277.neocities.org/Please")
+              break;
+            default:
+              alert("Failed");
+              window.location.replace("about:blank")
+          }
+        }
+      </script>
+    </center>
+  </body>
+</html>
