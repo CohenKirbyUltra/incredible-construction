@@ -36,8 +36,15 @@
       <audio autoplay loop id="audiothing">
           <source src="src/audio/lostandalone.mp3" type="audio/mpeg" />
       </audio>
+      <audio autoplay loop id="s">
+          <source src="src/audio/I think you need to stop.wav" type="audio/wav" />
+      </audio>
       <script>
         document.addEventListener("click", function(){
+            document.getElementById("audiothing").play();
+        });
+        
+        document.getElementById("server").addEventListener("click", function(){
             document.getElementById("audiothing").play();
         });
       </script>
