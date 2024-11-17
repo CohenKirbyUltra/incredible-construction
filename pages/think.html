@@ -24,7 +24,8 @@
       <script>
         var codes = [
           "fale",
-          "51260312"
+          "51260312",
+          "flashback"
         ];
         
         document.getElementById("submit").addEventListener("click", submitsubmit);
@@ -38,6 +39,9 @@
               break;
             case codes[1]:
               window.location.replace("https://spiteful1277.neocities.org/failed%20experiment");
+              break;
+            case codes[2]:
+              window.alert("it was so sudden. everything collapses on the day of the purge");
               break;
             default:
               alert("Failed");
