@@ -46,3 +46,9 @@ html {
   left: 16px;
   font-size: 18px;
 }
+
+input {
+  border-radius: 12px;
+  background-color: black;
+  color: white;
+}
