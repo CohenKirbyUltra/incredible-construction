@@ -1,3 +1,12 @@
+@font-face { 
+  font-family: faker; 
+  src: url('fonts/LowerResolution.ttf'); 
+} 
+
+* {
+  font-family: faker;
+}
+
 html {
   color: white;
   background-color: #222222;
