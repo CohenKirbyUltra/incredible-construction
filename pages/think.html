@@ -25,15 +25,17 @@
         var codes = [
           "fale",
           "51260312",
-          "flashback"
+          "flashback",
+          "712541",
+          "090470"
         ];
         
         document.getElementById("submit").addEventListener("click", submitsubmit);
         
         function submitsubmit() {
-          let value = document.getElementById("coder").value;
+          let value = document.getElementById("coder").value.toLowerCase();
           
-          switch (value.toLowerCase()) {
+          switch (value) {
             case codes[0]:
               window.location.replace("https://spiteful1277.neocities.org/Please");
               break;
@@ -43,6 +45,12 @@
             case codes[2]:
               window.alert("it was so sudden. everything collapses on the day of the purge");
               break;
+            case codes[3]:
+              window.location.replace("cohenkirbyultra.github.io/incredible-construction/pages/Piano.html");
+              break;
+            case codes[4]:
+              alert("Failed");
+              window.location.replace("https://cohenkirbyultra.github.io/testingroom/index.html");
             default:
               alert("Failed");
               window.location.replace("about:blank")
