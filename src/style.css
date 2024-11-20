@@ -5,9 +5,11 @@
 
 * {
   font-family: faker;
-  letter-spacing: 3px;
 }
 
+b {
+  letter-spacing: 5px;
+}
 html {
   color: white;
   background-color: #222222;
