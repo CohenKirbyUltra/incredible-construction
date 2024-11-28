@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="src/styles.css" />
+    <title>You Have the Audacity</title>
+    <header>
+      <div class="container" style="background-color: #bb2222">
+        <a class="top_left">
+          <img src="imgs/Audacity.png" width="30px" height="30px">
+          <span>...........................</span>
+        </a>
+        <nav class="top_right">
+        </nav>
+      </div>
+    </header>
+  </head>
+
+  <body>
+    <center>
+      <h2 class="nono"><i>incredible construction</i></h2>
+      <p class="nono">Play Incredible Beatboxing Modifications for free now!</p>
+      <br>
+      <section>
+        <img id="frame" src="imgs/incredible.png"/>
+      </section>
+      <br>
+      <div>
+        <button id="modifications" class="nono">Modifications</button>
+        <button id="server" class="nono" onclick="">Salvation</button>
+      </div>
+      <footer>
+        <h4 class="nono">you should've listened</h4>
+      </footer>
+    </center>
+    <script>
+      var timestried = 0;
+
+      document.getElementById("modifications").addEventListener("click", function (e) {
+          if (timestried < 10 && timestried > 5) {
+              this.innerHTML = "you should leave :)";
+          }
+          if (timestried > 10 && timestried < 21) {
+              this.innerHTML = "should leave :)";
+          }
+          if (timestried > 21 && timestried < 35) {
+              this.innerHTML = "leave.";
+          }
+          if (timestried > 50) {
+              this.disabled = true;
+              document.querySelectorAll(".nono").forEach((element) => {
+                element.innerHTML = "It's too late to leave";
+              });
+              document.getElementById("frame").src = "imgs/uh oh.png";
+              window.location.replace("https://cohenkirbyultra.github.io/incredible-construction/pages/rotten/rotting.html");
+          }
+        timestried++
+        console.log(timestried);
+      });
+    </script>
+  </body>
+</html>
