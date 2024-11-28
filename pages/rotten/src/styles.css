@@ -10,51 +10,48 @@
 b {
   letter-spacing: 5px;
 }
-      
-.documentitself {
-  height: 12000px;
+
+html {
+  color: white;
+  background-color: #222222;
+  background-image: url("bg1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-      html {
-        color: white;
-        background-color: #222222;
-        background-image: url("bg1.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-
-      .container {
-        position: relative;
-        vertical-align: middle;
-        margin: auto;
-        background-color: #bbbbbb;
-      }
+.container {
+  position: relative;
+  vertical-align: middle;
+  margin: auto;
+  background-color: #bbbbbb;
+}
       
-      .top_right {
-        position: absolute;
-        top: 8px;
-        right: 16px;
-        font-size: 18px;
-      }
+.top_right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 18px;
+}
 
-      .top_left {
-        position: absolute;
-        top: 8px;
-        left: 16px;
-        font-size: 18px;
-      }
+.top_left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font-size: 18px;
+}
 
-      #server {
-        position: absolute;
-        margin: auto;
-        right: 16px;
-        font-size: 18px;
-      }
+#server {
+  position: absolute;
+  margin: auto;
+  right: 16px;
+  font-size: 18px;
+}
 
-      #modifications {
-        position: absolute;
-        margin: auto;
-        left: 16px;
-        font-size: 18px;
-      }
+#modifications {
+  position: absolute;
+  margin: auto;
+  left: 16px;
+  font-size: 18px;
+}
+
