@@ -1,6 +1,63 @@
 <html>
   <head>
-    <link rel="stylesheet" href="src/styles.css" />
+    <style>
+      @font-face { 
+  font-family: faker; 
+  src: url('fonts/LowerResolution.ttf'); 
+} 
+
+* {
+  font-family: faker;
+}
+
+b {
+  letter-spacing: 5px;
+}
+
+html {
+  color: white;
+  background-color: #222222;
+  background-image: url("bg1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  position: relative;
+  vertical-align: middle;
+  margin: auto;
+  background-color: #bbbbbb;
+}
+      
+.top_right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 18px;
+}
+
+.top_left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font-size: 18px;
+}
+
+#server {
+  position: absolute;
+  margin: auto;
+  right: 16px;
+  font-size: 18px;
+}
+
+#modifications {
+  position: absolute;
+  margin: auto;
+  left: 16px;
+  font-size: 18px;
+}
+    </style>
     <title>You Have the Audacity</title>
     <header>
       <div class="container" style="background-color: #bb2222">
