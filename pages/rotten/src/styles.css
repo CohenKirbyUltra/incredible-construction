@@ -1,0 +1,57 @@
+@font-face { 
+  font-family: faker; 
+  src: url('fonts/LowerResolution.ttf'); 
+} 
+
+* {
+  font-family: faker;
+}
+
+b {
+  letter-spacing: 5px;
+}
+html {
+  color: white;
+  background-color: #222222;
+}
+
+.container {
+  position: relative;
+  vertical-align: middle;
+  margin: auto;
+  background-color: #bbbbbb;
+}
+
+.top_right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 18px;
+}
+
+.top_left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font-size: 18px;
+}
+
+#server {
+  position: absolute;
+  margin: auto;
+  right: 16px;
+  font-size: 18px;
+}
+
+#modifications {
+  position: absolute;
+  margin: auto;
+  left: 16px;
+  font-size: 18px;
+}
+
+input {
+  border-radius: 12px;
+  background-color: black;
+  color: white;
+}
