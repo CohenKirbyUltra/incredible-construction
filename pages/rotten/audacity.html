@@ -92,9 +92,19 @@ html {
         <source src="src/audio/Audacity.mp3" type="audio/mpeg" />
     </audio>
     <script>
-        window.addEventListener('click', () => {
-          document.getElementById("audiothing").play();
-        });
+      window.addEventListener('click', () => {
+        document.getElementById("audiothing").play();
+      });
+
+      var timestried = 0;
+
+      document.getElementById("modifications").addEventListener("click", function (e) {
+        if (timestried > 200) {
+          alert("I'M FUCKING TIRED OF YOU. LEAVE ME ALONE!!");
+          window.location.replace("https://spiteful1277.neocities.org/I%20AM%20TIRED%20OF%20YOU%20DAMMIT");
+        }        
+        timestried++
+      });
     </script>
   </body>
 </html>
