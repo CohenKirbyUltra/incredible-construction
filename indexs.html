@@ -1,16 +1,17 @@
 <html>
   <head>
-    <link rel="stylesheet" href="src/style.css" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Incredible Construction</title>
     <header>
       <div class="container" style="background-color: #bbbbbb">
         <a class="top_left">
           <img src="imgs/Icon.png" width="30px" height="30px">
-          <span>Incredible Construction</span>
+          <span>Free Incredible Mods 2025</span>
         </a>
         <nav class="top_right">
-          <a class="nono" href="https://cohenkirbyultra.github.io/incredible-construction/indexs.html">Main</a>
-          <a class="nono" href="https://discord.gg/wdYFRTYUPH">Server</a>
+          <a href="https://cohenkirbyultra.github.io/incredible-construction/">Main</a>
+          <a href="https://cohenkirbyultra.github.io/incredible-construction/pages/modifications">Modifications</a>
+          <a href="https://discord.gg/wdYFRTYUPH">Server</a>
         </nav>
       </div>
     </header>
@@ -18,44 +19,60 @@
 
   <body>
     <center>
-      <h2 class="nono"><i>incredible construction</i></h2>
-      <p class="nono">Play Incredible Beatboxing Modifications for free now!</p>
-      <br>
-      <section>
-        <img id="frame" src="imgs/incredible.png"/>
-      </section>
-      <br>
-      <div>
-        <button id="modifications" class="nono">Modifications</button>
-        <button id="server" class="nono" onclick="window.location.replace('https://cohenkirbyultra.github.io/incredible-construction/pages/think.html')">Salvation</button>
-      </div>
-      <footer>
-        <h4 class="nono">Incredible contruction; PROVIDING SALVATION</h4>
-      </footer>
+        <h1><i>INCREDIBLE</i></h1>
     </center>
+    <summary>Play free incredible modifications 2025 for free now!</summary>
+    <br>
+    <aside>
+      <img src="imgs/incredible.png"/>
+    </aside>
+    <br>
+    <article>
+      Incredible box (also stylized as INCREDiBLE BOX or incredible box) is a beatboxing-based music video game created,<br>
+      developed, and published by the French company So Far So Good (SFSG).<br>
+      The summary of the entertainment is specimens grabbing and placing ambient blocks on different vessels to make music.<br> 
+      The specimen can find skill to unleash animated extra and craft composition to integrate a title.<br>
+      An itself mode is also access to replicate an repeat number of randomness.<br>
+      <br>
+      The name “Incredible box” is a merge of the letter formats “incredible” and the composition the entertainment<br>
+      is based on, “beatbox.”<br>
+      <br>
+      The game was released on many device<br> 
+    </article>
+    <br>
+    <summary>
+      what us do
+    </summary>
+    <details>
+      We give very good mod. more soon.
+      <br>
+      proceed modifications if you want a fun.
+      <br>
+      proceed salvation if
+    </details>
+    <div>
+      <button id="modifications" onclick="window.location.replace('https://cohenkirbyultra.github.io/incredible-construction/pages/modifications.html');">Modifications</button>
+      <button id="server">Salvation</button>
+    </div>
+    <aside>
+      Constructing
+    </aside>
+    <footer>
+      <h4>Incredible contruction; PROVIDING SALVATION</h4>
+    </footer>
+    <audio autoplay loop id="audiothing">
+        <source src="src/audio/lostandalone.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="s">
+        <source src="src/audio/stop.wav" type="audio/wav" />
+    </audio>
     <script>
-      var timestried = 0;
-
-      document.getElementById("modifications").addEventListener("click", function (e) {
-          if (timestried < 10 && timestried > 5) {
-              this.innerHTML = "you should leave :)";
-          }
-          if (timestried > 10 && timestried < 21) {
-              this.innerHTML = "should leave :)";
-          }
-          if (timestried > 21 && timestried < 35) {
-              this.innerHTML = "leave.";
-          }
-          if (timestried > 50) {
-              this.disabled = true;
-              document.querySelectorAll(".nono").forEach((element) => {
-                element.innerHTML = "It's too late to leave";
-              });
-              document.getElementById("frame").src = "imgs/uh oh.png";
-              window.location.replace("https://cohenkirbyultra.github.io/incredible-construction/pages/rotten/rotting.html");
-          }
-        timestried++
-        console.log(timestried);
+      document.addEventListener("click", function(){
+          document.getElementById("audiothing").play();
+      });
+        
+      document.getElementById("server").addEventListener("click", function(){
+          document.getElementById("s").play();
       });
     </script>
   </body>
