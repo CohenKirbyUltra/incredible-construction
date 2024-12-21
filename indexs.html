@@ -1,6 +1,6 @@
 <html>
   <head>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="src/style.css" />
     <title>Incredible Construction</title>
     <header>
       <div class="container" style="background-color: #bbbbbb">
@@ -51,7 +51,7 @@
       proceed salvation if
     </details>
     <div>
-      <button id="modifications" onclick="window.location.replace('https://cohenkirbyultra.github.io/incredible-construction/pages/modifications.html');">Modifications</button>
+      <button id="modifications">Modifications</button>
       <button id="server">Salvation</button>
     </div>
     <aside>
@@ -67,12 +67,28 @@
         <source src="src/audio/stop.wav" type="audio/wav" />
     </audio>
     <script>
-      document.addEventListener("click", function(){
-          document.getElementById("audiothing").play();
-      });
-        
-      document.getElementById("server").addEventListener("click", function(){
-          document.getElementById("s").play();
+      var timestried = 0;
+
+      document.getElementById("modifications").addEventListener("click", function (e) {
+          if (timestried < 10 && timestried > 5) {
+              this.innerHTML = "you should leave :)";
+          }
+          if (timestried > 10 && timestried < 21) {
+              this.innerHTML = "should leave :)";
+          }
+          if (timestried > 21 && timestried < 35) {
+              this.innerHTML = "leave.";
+          }
+          if (timestried > 50) {
+              this.disabled = true;
+              document.querySelectorAll(".nono").forEach((element) => {
+                element.innerHTML = "It's too late to leave";
+              });
+              document.getElementById("frame").src = "imgs/uh oh.png";
+              window.location.replace("https://cohenkirbyultra.github.io/incredible-construction/pages/rotten/rotting.html");
+          }
+        timestried++
+        console.log(timestried);
       });
     </script>
   </body>
