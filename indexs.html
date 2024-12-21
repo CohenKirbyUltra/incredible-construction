@@ -71,21 +71,21 @@
 
       document.getElementById("modifications").addEventListener("click", function (e) {
           if (timestried < 10 && timestried > 5) {
-              this.innerHTML = "you should leave :)";
+              this.innerHTML = "Modification";
           }
           if (timestried > 10 && timestried < 21) {
-              this.innerHTML = "should leave :)";
+              this.innerHTML = "Modifiyation";
           }
           if (timestried > 21 && timestried < 35) {
-              this.innerHTML = "leave.";
+              this.innerHTML = "Conversion";
           }
           if (timestried > 50) {
               this.disabled = true;
               document.querySelectorAll(".nono").forEach((element) => {
-                element.innerHTML = "It's too late to leave";
+                element.innerHTML = "Adaptation";
               });
               document.getElementById("frame").src = "imgs/uh oh.png";
-              window.location.replace("https://cohenkirbyultra.github.io/incredible-construction/pages/rotten/rotting.html");
+              window.location.replace("https://cohenkirbyultra.github.io/incredible-construction/pages/modification.html");
           }
         timestried++
         console.log(timestried);
