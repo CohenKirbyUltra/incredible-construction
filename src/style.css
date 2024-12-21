@@ -36,20 +36,6 @@ html {
   font-size: 18px;
 }
 
-#server {
-  position: absolute;
-  margin: auto;
-  right: 16px;
-  font-size: 18px;
-}
-
-#modifications {
-  position: absolute;
-  margin: auto;
-  left: 16px;
-  font-size: 18px;
-}
-
 input {
   border-radius: 12px;
   background-color: black;
