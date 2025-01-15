@@ -96,6 +96,10 @@ html {
         document.getElementById("audiothing").play();
       });
 
+      document.addEventListener('load', () => {
+        alert("WARNING: This page is being repurposed. it leads to an invalid link as of right now so just be warned");
+      });
+
       var timestried = 0;
 
       document.getElementById("modifications").addEventListener("click", function (e) {
