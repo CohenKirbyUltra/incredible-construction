@@ -1,0 +1,29 @@
+{
+  "product": "000000",
+  "version": 1,
+  "mods": {
+    "mainMods": {
+      "Fale1": true,
+      "Fale2": false,
+      "Please": true,
+      "Fale3": false,
+      "Interlude": false
+    },
+    "rottingMods": {
+      "M1": false,
+      "M2": false,
+      "M3": false,
+      "M4": false,
+      "M9": false,
+      "Y1": false,
+      "Y2": false,
+      "Y3": false,
+      "Y4": false,
+      "O1": false,
+      "O2": false,
+      "O3": false,
+      "O4": false,
+      "O5": false
+    }
+  }
+}
