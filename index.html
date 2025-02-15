@@ -1,74 +1,94 @@
 <html>
   <head>
     <link rel="stylesheet" href="src/style.css" />
+    <style>
+      .layout {
+        width: 100%;
+
+        display: grid;
+        grid:
+          "header" auto
+          "main" 1fr
+          "footer" auto
+        / 1fr;
+        gap: 8px;
+        }
+
+      .header { grid-area: header; }
+      .main { grid-area: main; }
+      .footer { grid-area: footer; }
+    </style>
     <title>Incredible Construction</title>
-    <header>
-      <div class="container" style="background-color: #bbbbbb">
-        <a class="top_left">
-          <img src="imgs/Icon.png" width="30px" height="30px">
-          <span>Free Incredible Mods 2025</span>
-        </a>
-        <nav class="top_right">
-          <a href="https://cohenkirbyultra.github.io/incredible-construction/">Main</a>
-          <a href="https://cohenkirbyultra.github.io/incredible-construction/pages/modifications">Modifications</a>
-          <a href="">Server</a>
-        </nav>
-      </div>
-    </header>
   </head>
 
   <body>
     <center>
-        <h1><i>INCREDIBLE</i></h1>
-    </center>
-    <summary>Play free incredible modifications 2025 for free now!</summary>
-    <br>
-    <aside>
-      <img src="imgs/incredible.png"/>
-    </aside>
-    <br>
-    <article>
-      Incredible box is very incredble.
-    </article>
-    <br>
-    <summary>
-      what us do
-    </summary>
-    <details>
-      We give very good mod. more soon.
-      <br>
-      proceed modifications if you want a fun.
-      <br>
-      proceed salvation if
-    </details>
-    <div>
-      <button id="modifications" onclick="window.location.replace('https://cohenkirbyultra.github.io/incredible-construction/pages/modifications.html');">Modifications</button>
-      <button id="server">Salvation</button>
-    </div>
-    <aside>
-      Constructing
-    </aside>
-    <div>
-      <img name="croak" width="200px" height="400px" src="imgs/croak.gif"/>
-      <label for="croak">Croaker Moves</label>
-    </div>
-    <footer>
-      <h4>Incredible contruction; PROVIDING SALVATION</h4>
-    </footer>
-    <audio autoplay loop id="audiothing">
-        <source src="src/audio/lostandalone.mp3" type="audio/mpeg" />
-    </audio>
-    <audio id="s">
-        <source src="src/audio/stop.wav" type="audio/wav" />
-    </audio>
-    <script>
-      document.addEventListener("click", function(){
-          document.getElementById("audiothing").play();
-      });
+      <section class="layout">
+        <div class="header">
+          <h1><i>INCREDIBLE</i></h1>
+          <summary>Play free incredible modifications 2025 for free now!</summary>
+          <br>
+          <aside>
+            <img src="imgs/incredible.png"/>
+          </aside>
+          <br>
+        </div>
+        <div class="main">
+          <article>
+          Incredible box (also stylized as INCREDiBLE BOX or incredible box) is a beatboxing-based music video game created,<br>
+          developed, and published by the French company So Far So Good (SFSG).<br>
+          The summary of the entertainment is specimens grabbing and placing ambient blocks on different vessels to make music.<br> 
+          The specimen can find skill to unleash animated extra and craft composition to integrate a title.<br>
+          An itself mode is also access to replicate an repeat number of randomness.<br>
+          <br>
+          The name “Incredible box” is a merge of the letter formats “incredible” and the composition the entertainment<br>
+          is based on, “beatbox.”<br>
+          <br>
+          The game was released on many device<br> 
+          </article>
+          <br>
+          <summary>
+            what us do
+          </summary>
+          <details>
+            We give very good mod. more soon.
+            <br>
+            proceed modifications if you want a fun.
+            <br>
+            proceed salvation if
+          </details>
+          <audio autoplay loop id="audiothing">
+            <source src="src/audio/lostandalone.mp3" type="audio/mpeg" />
+          </audio>
+          <audio id="s">
+            <source src="src/audio/stop.wav" type="audio/wav" />
+          </audio>
+          <script>
+            document.addEventListener("click", function(){
+              document.getElementById("audiothing").play();
+            });
         
-      document.getElementById("server").addEventListener("click", function(){
-          document.getElementById("s").play();
-      });
-    </script>
+            document.getElementById("server").addEventListener("click", function(){
+              document.getElementById("s").play();
+            });
+          </script></div>
+          <div class="footer">
+            <div>
+              <button id="modifications" onclick="window.location.replace('https://cohenkirbyultra.github.io/incredible-construction/pages/modifications.html');">Modifications</button>
+              <button id="server">Salvation</button>
+            </div>
+            <aside>
+              Constructing
+            </aside>
+            <div>
+              <img name="croak" width="200px" height="400px" src="imgs/croak.gif"/>
+              <label for="croak">Croaker Moves</label>
+            </div>
+            <footer>
+              <h4>Incredible contruction; PROVIDING SALVATION</h4>
+            </footer>
+          </div>
+      </section>
+    </center>
   </body>
 </html>
