@@ -50,36 +50,18 @@
           margin-top: 20px;
       }
 
-      .example-container {
-  width: 800px;
-  @include make-container();
-}
-
-.example-row {
-  @include make-row();
-}
-
-.example-content-main {
-  @include make-col-ready();
-
-  @include media-breakpoint-up(sm) {
-    @include make-col(6);
-  }
-  @include media-breakpoint-up(lg) {
-    @include make-col(8);
-  }
-}
-
-.example-content-secondary {
-  @include make-col-ready();
-
-  @include media-breakpoint-up(sm) {
-    @include make-col(6);
-  }
-  @include media-breakpoint-up(lg) {
-    @include make-col(4);
-  }
-}
+      .grid-container {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 20px;
+          padding: 20px;
+      }
+      
+      .grid-item {
+          padding: 20px;
+          background-color: #f0f0f0;
+          border: 1px solid #ccc;
+      }
     </style>
     <style>
         header {
@@ -164,49 +146,48 @@
       </header>
   </head>
   <body>
-    <center>
       <h5>Welcome to the modification section. click on the button(s) to experience a world</h5>
       
       <br>
       
-      <div class="example-container">
-      <div class="example-row">
-        <div class="example-content-main">
-          <div id="modslot">
-              <a href="https://spiteful1277.neocities.org/Incredible%20Box%20V1%20Free%20Version%20Play%20Now">
-                  <img src="../imgs/incrediblegame.png" class="icon" width="125px" height="125px">
-                  </img>
-              </a>
-              <span>Incredible Box</span>
+      <div class="grid-container">
+          <div class="grid-item">
+              <div id="modslot">
+                  <a href="https://spiteful1277.neocities.org/Incredible%20Box%20V1%20Free%20Version%20Play%20Now">
+                      <img src="../imgs/incrediblegame.png" class="icon" width="125px" height="125px">
+                      </img>
+                  </a>
+                  <span>Incredible Box</span>
+              </div>
           </div>
-        </div>
 
-        <div class="example-content-secondary">
-          <div id="modslot">
-              <a href="https://spiteful1277.neocities.org/Incredible%20Box%20V1%20Mix%20Version">
-                  <img src="../imgs/incrediblegame.png" class="icon" width="125px" height="125px">
-                  </img>
-              </a>
-              <span>Incredible Box Mix Ver</span>
+          <div class="grid-item">
+              <div id="modslot">
+                  <a href="https://spiteful1277.neocities.org/Incredible%20Box%20V1%20Mix%20Version">
+                      <img src="../imgs/incrediblegame.png" class="icon" width="125px" height="125px">
+                      </img>
+                  </a>
+                  <span>Incredible Box Mix Ver</span>
+              </div>
           </div>
-        </div>
-    </div>
-    </div>
+      </div>
         
-          <br>
+      <br>
       
-          <div id="modslot">
-              <a href="https://spiteful1277.neocities.org/Incredible%20Box%20V1%20Free%20OLD">
-                  <img src="../imgs/incrediblegame.png" class="icon" width="125px" height="125px">
-                  </img>
-              </a>
-              <span>Incredible Box OLD</span>
+      <div class="grid-container">
+          <div class="grid-item">
+              <div id="modslot">
+                  <a href="https://spiteful1277.neocities.org/Incredible%20Box%20V1%20Free%20OLD">
+                      <img src="../imgs/incrediblegame.png" class="icon" width="125px" height="125px">
+                      </img>
+                  </a>
+                  <span>Incredible Box OLD</span>
+              </div>
           </div>
       </div>
       
-          <footer>
-              <h3>More soon</h3>
-          </footer>
-    </center>
+      <footer>
+          <h3>More soon</h3>
+      </footer>
   </body>
 </html>
