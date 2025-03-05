@@ -2,7 +2,110 @@
 
 <html>
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/style-new.css" />
+    <style>
+        body {
+            font-family: 'Arial';
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Header Styles */
+        header {
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            font-family: 'Arial';
+        }
+
+        /* Hollow Text Effect */
+        header h1 {
+            font-size: 3em;
+            letter-spacing: 1px;
+            font-weight: normal;
+            text-transform: uppercase;
+            display: inline-block;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        /* Icon Styles */
+        header i {
+            font-size: 4em;
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .main-content {
+            flex: 3;
+            padding: 20px;
+            margin-right: 20px;
+        }
+
+        .sidebar {
+            flex: 1;
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        .buttons-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
     <title>Incredible Construction</title>
   </head>
 
@@ -11,7 +114,6 @@
           <h1><i>INCREDIBLE</i></h1>
           
           <div class="container" style="background-color: #bbbbbb">
-            
               <a class="top_left">
                   <img src="imgs/Icon.png" width="30px" height="30px">
                   <span>Free Incredible box 2025</span>
@@ -95,14 +197,11 @@
           <aside>
             Constructing
           </aside>
-            
-          <div>
-              <img name="croak" width="200px" height="400px" src="imgs/croak.gif"/>
-              <label for="croak">Croaker Moves</label>
-          </div>
-            <footer>
-              <h4>&copy; Incredible contruction; PROVIDING SALVATION</h4>
-            </footer>
+
+          <footer>
+              <h4>Incredible Contruction; PROVIDING SALVATION</h4>
+          </footer>
+    
           </div>
       </section>
   </body>
