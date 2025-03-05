@@ -1,0 +1,99 @@
+/* testing this */
+
+body {
+    font-family: 'Arial';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header {
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    font-family: 'Arial';
+}
+
+header h1 {
+    font-size: 3em;
+    letter-spacing: 1px;
+    font-weight: normal;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+header i {
+    font-size: 4em;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.main-content {
+    flex: 3;
+    padding: 20px;
+    margin-right: 20px;
+}
+
+.sidebar {
+    flex: 1;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+.buttons-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
