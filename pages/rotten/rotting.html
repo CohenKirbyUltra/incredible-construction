@@ -12,6 +12,16 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        animation: spinBackground 30s linear infinite;
+      }
+
+      @keyframes spinBackground {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
       }
 
       .container {
@@ -47,6 +57,18 @@
         margin: auto;
         left: 16px;
         font-size: 18px;
+      }
+
+      @keyframes twitch {
+        0% { transform: translate(0, 0); }
+        25% { transform: translate(5px, 5px); }
+        50% { transform: translate(-5px, -5px); }
+        75% { transform: translate(5px, -5px); }
+        100% { transform: translate(-5px, 5px); }
+      }
+
+      .twitching {
+        animation: twitch 0.1s infinite;
       }
     </style>
     <title>Incredible Construction</title>
@@ -156,7 +178,6 @@
         }
         
         function addIconText(spanText, clickable, url) {
-            // create a new div element
             let ran = getRndInteger(-200, 200);
             let rany = getRndInteger(-10, 10);
             var newURL = document.createElement("a");
@@ -171,11 +192,9 @@
             
             const currentDiv = document.getElementById("modificationss");
             
-            // and give it some content
             var newSpan = document.createElement("h5");
             newSpan.innerHTML = spanText;
             newSpan.style.transform = "translate(" + ran + "px," + rany + "px)";
-            // add the text node to the newly created div
             let breakage = document.createElement("BR");
 
             const fragment = document.createDocumentFragment();
@@ -188,6 +207,9 @@
             li.appendChild(newSpan);
 
             document.body.appendChild(fragment);
+
+            newSpan.classList.add("twitching");
+            newThing.classList.add("twitching");
           
             window.addEventListener('click', () => {
                 document.getElementById("facade").play();
@@ -201,7 +223,7 @@
             });      
         }, 1000);
       </script>
-      <h5>Welcome to the modification section. click on the button(s) to experience a world</h5>
+      <h5>Welcome to the modification section. Click on the button(s) to experience a world</h5>
       <br>
       <div id="modificationss">
       </div>
