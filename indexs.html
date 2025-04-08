@@ -323,11 +323,11 @@
                   _onUpdate();
               }, 50);
               
-              document.addEventListener("loaded", function(){
+              document.addEventListener("loadeddata", () => {
                   document.getElementById("audiothing").play();
               });
         
-              document.getElementById("server").addEventListener("click", function(){
+              document.getElementById("server").addEventListener("click", () => {
                   document.getElementById("s").play();
               });
           </script>
