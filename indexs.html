@@ -1,5 +1,5 @@
 <!-- if you are snooping, this is a (as of right now) unofficial website remake test. -->
-<h6 ondbclick="unlock()" class="d">
+<h6 id=":(" class="d">
   :(
 </h6>
 <html>
@@ -309,6 +309,8 @@
               var Unlock = new Audio("src/audio/unlock.wav");
               var locked = true; 
               var musicloaded = false;
+
+              document.getElementById(":(").addEventListener("dblclick", unlock);
 
               function _onUpdate() {
                   document.getElementById("modifications").disabled = locked;
