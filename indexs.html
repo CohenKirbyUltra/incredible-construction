@@ -1,90 +1,335 @@
+<!-- if you are snooping, this is a (as of right now) unofficial website remake test. -->
+
 <html>
   <head>
-    <link rel="stylesheet" href="src/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style-new.css" />
+    <style>
+        @font-face { 
+            font-family: faker; 
+            src: url('fonts/LowerResolution.ttf'); 
+        } 
+
+        * {
+            font-family: faker;
+        }
+        body {
+            font-family: 'Arial';
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Header Styles */
+        header {
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            font-family: 'Arial';
+        }
+
+        /* Hollow Text Effect */
+        header h1 {
+            font-size: 1em;
+            letter-spacing: 1px;
+            font-weight: normal;
+            text-transform: uppercase;
+            display: inline-block;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        /* Icon Styles */
+        header i {
+            font-size: 4em;
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        nav {
+            background-color: #232323;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .main-content {
+            flex: 3;
+            padding: 20px;
+            margin-right: 20px;
+        }
+
+        .sidebar {
+            flex: 1;
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        .buttons-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+    <style>
+      @font-face { 
+          font-family: faker; 
+          src: url('../fonts/LowerResolution.ttf'); 
+      } 
+
+      * {
+          font-family: faker;
+      }
+
+      b {
+          letter-spacing: 5px;
+      }
+      html {
+          color: white;
+          background-color: #222222;
+      }
+
+      .top_right {
+          position: absolute;
+          top: 8px;
+          right: 16px;
+          font-size: 18px;
+      }
+
+      .top_left {
+          position: absolute;
+          top: 8px;
+          left: 16px;
+          font-size: 18px;
+      }
+
+      input {
+          border-radius: 12px;
+          background-color: black;
+          color: white;
+      }
+
+      #modslot {
+          background-color: #333333;
+          width: 170px;
+          height: 170px;
+      }
+
+      .buttons-container {
+          display: flex;
+          gap: 10px;
+          margin-top: 20px;
+      }
+
+      .grid-container {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 20px;
+          padding: 20px;
+      }
+      
+      .grid-item {
+          padding: 20px;
+          background-color: #121212;
+          border: 1px solid #ccc;
+      }
+
+      .btn_a {
+          background-color: #232323;
+          border-radius: 4px;
+          border-width: 4px;
+          color:#ccc;
+      }
+
+      .btn_a:hover {
+          background-color: #323232;
+      }
+
+      img {
+          border-width: 8px;
+          border-color: #111;
+      }
+
+      #yap {
+          border-width: 8px;
+          border-color: #222222;
+      }
+
+      .in_btn {
+        color: grey;
+        font-weight: bold;
+      }
+    </style>
     <title>Incredible Construction</title>
-    <header>
-      <div class="container" style="background-color: #bbbbbb">
-        <a class="top_left">
-          <img src="imgs/Icon.png" width="30px" height="30px">
-          <span>Free Incredible Mods 2025</span>
-        </a>
-        <nav class="top_right">
-          <a href="https://cohenkirbyultra.github.io/incredible-construction/">Main</a>
-          <a href="">Server</a>
-        </nav>
-      </div>
-    </header>
   </head>
 
   <body>
-    <center>
-        <h1><i>INCREDIBLE</i></h1>
-    </center>
-    <summary>Play free incredible modifications 2025 for free now!</summary>
-    <br>
-    <aside>
-      <img src="imgs/incredible.png"/>
-    </aside>
-    <br>
-    <article>
-      Incredible box (also stylized as INCREDiBLE BOX or incredible box) is a beatboxing-based music video game created,<br>
-      developed, and published by the French company So Far So Good (SFSG).<br>
-      The summary of the entertainment is specimens grabbing and placing ambient blocks on different vessels to make music.<br> 
-      The specimen can find skill to unleash animated extra and craft composition to integrate a title.<br>
-      An itself mode is also access to replicate an repeat number of randomness.<br>
-      <br>
-      The name “Incredible box” is a merge of the letter formats “incredible” and the composition the entertainment<br>
-      is based on, “beatbox.”<br>
-      <br>
-      The game was released on many device<br> 
-    </article>
-    <br>
-    <summary>
-      what us do
-    </summary>
-    <details>
-      We give very good mod. more soon.
-      <br>
-      proceed modifications if
-    </details>
-    <div>
-      <button id="modifications">Modifications</button>
-      <button id="server" onclick="window.location.replace('https://cohenkirbyultra.github.io/incredible-construction/pages/file%20merger.html');">Salvation</button>
-    </div>
-    <aside>
-      Constructing
-    </aside>
-    <footer>
-      <h4>Incredible contruction; PROVIDING</h4>
-    </footer>
-    <audio autoplay loop id="audiothing">
-        <source src="src/audio/lostandalone.mp3" type="audio/mpeg" />
-    </audio>
-    <audio id="s">
-        <source src="src/audio/stop.wav" type="audio/wav" />
-    </audio>
-    <script>
-      var timestried = 0;
+      <header>
+          <h1><i>INCREDIBLE</i></h1>
+          
+          <img src="imgs/Icon.png" width="30px" height="30px">
+          <span>Free Incredible box</span>
 
-      document.getElementById("modifications").addEventListener("click", function (e) {
-          if (timestried < 10 && timestried > 5) {
-              this.innerHTML = "Modification";
-          }
-          if (timestried > 10 && timestried < 21) {
-              this.innerHTML = "Modifiyation";
-          }
-          if (timestried > 21 && timestried < 35) {
-              this.innerHTML = "Conversion";
-          }
-          if (timestried > 50) {
-              document.querySelectorAll(".nono").forEach((element) => {
-                element.innerHTML = "Adaptation";
+          <br>
+            
+          <nav>
+              <ul>
+                  <li><button class="btn_a"><a class="in_btn" href="https://cohenkirbyultra.github.io/incredible-construction/">Main</a></button></li>
+                  <li><button class="btn_a"><a class="in_btn">Server</a></button></li>
+              </ul>
+          </nav>
+          
+          <br>
+
+          <summary><h4>Play free incredible modifications 2025 for free now!</h4></summary>
+          
+          <br>
+          
+          <aside>
+              <img src="imgs/incredible.png"/>
+          </aside>
+          
+          <br>
+      </header>
+      
+      <br>
+
+      <center>
+      <div>
+        <div id="yap">
+          <section>
+              <article>
+                  Incredible box (also stylized as INCREDiBLE BOX or incredible box) is a beatboxing-based music video game created,<br>
+                  developed, and published by the French company So Far So Good (SFSG).<br>
+                  The summary of the entertainment is specimens grabbing and placing ambient blocks on different vessels to make music.<br> 
+                  The specimen can find skill to unleash animated extra and craft composition to integrate a title.<br>
+                  An itself mode is also access to replicate an repeat number of randomness.<br>
+                  <br>
+                  The name “Incredible box” is a merge of the letter formats “incredible” and the composition the entertainment<br>
+                  is based on, “beatbox.”<br>
+                  <br>
+                  The game was released on many device<br> 
+              </article>
+          </section>
+          <br>
+          
+          <summary>
+            what us do
+          </summary>
+          
+          <details>
+            We give very good mod. more soon.
+            <br>
+            proceed modifications if you want a fun.
+            <br>
+            proceed salvation if
+          <button id="modifications">Modifications</button>
+          <button id="server">Salvation</button>
+          </details>
+
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          
+        </div>
+      </div>
+      </center>
+          <audio autoplay loop id="audiothing">
+              <source src="src/audio/lostandalone.mp3" type="audio/mpeg" />
+          </audio>
+      
+          <audio id="s">
+              <source src="src/audio/stop.wav" type="audio/wav" />
+          </audio>
+      
+          <script>
+              var Unlock = new Audio("src/unlock.wav");
+              var locked = true; 
+
+              function _onUpdate() {
+                  document.getElementById("modifications").disabled = locked;
+              }
+
+              function unlock() {
+                  Unlock.play();
+                  locked = false;
+              }
+
+              setInterval(() => {
+                  _onUpdate();
+              }, 50);
+              
+              document.addEventListener("click", function(){
+                  document.getElementById("audiothing").play();
               });
-              window.location.replace("https://cohenkirbyultra.github.io/incredible-construction/pages/modification.html");
-          }
-        timestried++
-        console.log(timestried);
-      });
-    </script>
+        
+              document.getElementById("server").addEventListener("click", function(){
+                  document.getElementById("s").play();
+              });
+          </script>
+      
+          <aside ondbclick="unlock()">
+            :(
+          </aside>
+
+          <footer>
+              <center><marquee><h4>Incredible Contruction; PROVIDING SALVATION</h4></marquee></center>
+          </footer>
+    
+          </div>
+      </section>
   </body>
 </html>
