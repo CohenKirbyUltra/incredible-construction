@@ -308,6 +308,7 @@
           <script>
               var Unlock = new Audio("src/audio/unlock.wav");
               var locked = true; 
+              var musicloaded = false;
 
               function _onUpdate() {
                   document.getElementById("modifications").disabled = locked;
@@ -323,8 +324,10 @@
                   _onUpdate();
               }, 50);
               
-              document.addEventListener("loadeddata", () => {
-                  document.getElementById("audiothing").play();
+              document.addEventListener("click", () => {
+                  if (!musicloaded) {
+                      document.getElementById("audiothing").play();
+                  }
               });
         
               document.getElementById("server").addEventListener("click", () => {
