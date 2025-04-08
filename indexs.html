@@ -306,7 +306,7 @@
           </audio>
       
           <script>
-              var Unlock = new Audio("src/unlock.wav");
+              var Unlock = new Audio("src/audio/unlock.wav");
               var locked = true; 
 
               function _onUpdate() {
@@ -315,6 +315,7 @@
 
               function unlock() {
                   Unlock.play();
+                  document.getElementById("audiothing").pause();
                   locked = false;
               }
 
@@ -322,7 +323,7 @@
                   _onUpdate();
               }, 50);
               
-              document.addEventListener("click", function(){
+              document.addEventListener("loaded", function(){
                   document.getElementById("audiothing").play();
               });
         
