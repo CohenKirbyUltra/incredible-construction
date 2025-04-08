@@ -1,5 +1,4 @@
 <h6 id=":(" class="d">
-  :(
 </h6>
 <html>
   <head>
@@ -309,6 +308,9 @@
           <script>
               var Unlock = new Audio("src/audio/unlock.wav");
               var locked = window.location.hash == "#preload" ? false : true; 
+
+              document.getElementById(":(").innerHTML window.location.hash == "#preload" ? ":(" : "";
+
               var musicloaded = false;
 
               document.getElementById(":(").addEventListener("dblclick", unlock);
