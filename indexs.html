@@ -1,4 +1,3 @@
-<!-- if you are snooping, this is a (as of right now) unofficial website remake test. -->
 <h6 id=":(" class="d">
   :(
 </h6>
@@ -213,8 +212,8 @@
       }
 
       .in_btn {
-        color: grey;
-        font-weight: bold;
+          color: grey;
+          font-weight: bold;
       }
     </style>
     <title>Incredible Construction</title>
@@ -280,8 +279,8 @@
             proceed modifications if you want a fun.
             <br>
             proceed salvation if
-          <button id="modifications">Modifications</button>
-          <button id="server">Salvation</button>
+          <button class="btn_a" id="modifications">Modifications</button>
+          <button class="btn_a" id="server">Salvation</button>
           </details>
 
           <br>
@@ -317,6 +316,7 @@
               }
 
               function unlock() {
+                  document.getElementById(":(").innerHTML = "";
                   Unlock.play();
                   document.getElementById("audiothing").pause();
                   locked = false;
@@ -335,6 +335,10 @@
         
               document.getElementById("server").addEventListener("click", () => {
                   document.getElementById("s").play();
+              });
+
+              document.getElementById("modifications").addEventListener("click", () => {
+                  window.location.href = "pages/modification.html";
               });
           </script>
     
