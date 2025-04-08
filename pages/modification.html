@@ -1,99 +1,103 @@
 <html>
-  <head>
+
+<head>
     <style>
-      @font-face { 
-          font-family: faker; 
-          src: url('../src/fonts/LowerResolution.ttf'); 
-      } 
+        @font-face {
+            font-family: faker;
+            src: url('../src/fonts/LowerResolution.ttf');
+        }
 
-      * {
-          font-family: faker;
-          letter-spacing: 2.5px; 
-      }
+        * {
+            font-family: faker;
+            letter-spacing: 2.5px;
+        }
 
-      b {
-          letter-spacing: 5px;
-      }
-      html {
-          color: white;
-          background-color: #222222;
-      }
+        b {
+            letter-spacing: 5px;
+        }
 
-      .top_right {
-          position: absolute;
-          top: 8px;
-          right: 16px;
-          font-size: 18px;
-      }
+        html {
+            color: white;
+            background-color: #222222;
+        }
 
-      .top_left {
-          position: absolute;
-          top: 8px;
-          left: 16px;
-          font-size: 18px;
-      }
+        .top_right {
+            position: absolute;
+            top: 8px;
+            right: 16px;
+            font-size: 18px;
+        }
 
-      input {
-          border-radius: 12px;
-          background-color: black;
-          color: white;
-      }
+        .top_left {
+            position: absolute;
+            top: 8px;
+            left: 16px;
+            font-size: 18px;
+        }
 
-      #modslot {
-          background-color: #333333;
-          width: 170px;
-          height: 170px;
-      }
+        input {
+            border-radius: 12px;
+            background-color: black;
+            color: white;
+        }
 
-      .buttons-container {
-          display: flex;
-          gap: 10px;
-          margin-top: 20px;
-      }
+        #modslot {
+            background-color: #333333;
+            width: 170px;
+            height: 170px;
+        }
 
-      .grid-container {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 20px;
-          padding: 20px;
-      }
-      
-      .grid-item {
-          padding: 20px;
-          background-color: #121212;
-          border: 1px solid #ccc;
-      }
+        .buttons-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
 
-      .btn_a {
-          background-color: #232323;
-          border-radius: 4px;
-          border-width: 4px;
-          color:#ccc;
-      }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
 
-      .btn_a:hover {
-          background-color: #323232;
-      }
+        .grid-item {
+            padding: 20px;
+            background-color: #121212;
+            border: 1px solid #ccc;
+        }
 
-      img {
-          border-width: 8px;
-          border-color: #111;
-      }
+        button {
+            background-color: #232323;
+            border-radius: 4px;
+            border-width: 4px;
+            color: #ccc;
+            cursor: default;
+        }
 
-      #yap {
-          border-width: 8px;
-          border-color: #222222;
-      }
+        button:hover {
+            background-color: #323232;
+            cursor: pointer;
+        }
 
-      .in_btn {
-        color: grey;
-        font-weight: bold;
-      }
+        img {
+            border-width: 8px;
+            border-color: #111;
+        }
 
-      #current {
-          font-weight: bold;
-          color: hsl(0, 0, -30);
-      }
+        #yap {
+            border-width: 8px;
+            border-color: #222222;
+        }
+
+        .in_btn {
+            color: grey;
+            font-weight: bold;
+        }
+
+        #current {
+            font-weight: bold;
+            color: hsl(0, 0, -30);
+        }
     </style>
     <style>
         header {
@@ -156,78 +160,82 @@
         }
     </style>
     <title>Incredible Constructor</title>
-      <header>
-          <h1><i>INCREDIBLE!</i></h1>
-          
-          <img src="../imgs/Icon.png" width="30px" height="30px">
-          <span>Free Incredible Stuff</span>
-            
-          <nav>
-              <ul>
-                  <li><button class="btn_a"><a class="in_btn" href="https://cohenkirbyultra.github.io/incredible-construction/indexs.html#preload">Main</a></button></li>
-                  <li><button class="btn_a" disabled="true"><a class="in_btn" id="current">Modifications</a></button></li>
-                  <li><button class="btn_a"><a class="in_btn">Server</a></button></li>
-              </ul>
-          </nav>
-      </header>
-  </head>
-  <body>
-      <h5>Welcome to the modification. click on the button(s) to experience their world</h5>
-      
-      <br>
-      
-      <div class="grid-container">
-          <div class="grid-item">
-              <div id="modslot">
-                  <a href="https://spiteful1277.neocities.org/Incredible%20Box%20V2%20Free%20Version%20Play%20Now">
-                      <img src="../imgs/incrediblegame.png" class="icon" width="125px" height="125px">
-                      </img>
-                  </a>
-                  <span>Incredible</span>
-              </div>
+    <header>
+        <h1><i>INCREDIBLE!</i></h1>
 
-              <div>
+        <img src="../imgs/Icon.png" width="30px" height="30px">
+        <span>Free Incredible Stuff</span>
+
+        <nav>
+            <ul>
+                <li><button class="btn_a"><a class="in_btn"
+                            href="https://cohenkirbyultra.github.io/incredible-construction/indexs.html#preload">Main</a></button>
+                </li>
+                <li><button class="btn_a" disabled="true"><a class="in_btn" id="current">Modifications</a></button></li>
+                <li><button class="btn_a"><a class="in_btn">Server</a></button></li>
+            </ul>
+        </nav>
+    </header>
+</head>
+
+<body>
+    <h5>Welcome to the modification. click on the button(s) to experience their world</h5>
+
+    <br>
+
+    <div class="grid-container">
+        <div class="grid-item">
+            <button id="modslot">
+                <a href="https://spiteful1277.neocities.org/Incredible%20Box%20V2%20Free%20Version%20Play%20Now">
+                    <img src="../imgs/incrediblegame.png" class="icon" width="125px" height="125px">
+                    </img>
+                </a>
+                <span>Incredible</span>
+            </button>
+
+            <div>
                 <p style="font-size: 20px;">Recommended</p>
                 <h4>Incredible Experience.</h4>
-              </div>
-          </div>
+            </div>
+        </div>
 
-          <div class="grid-item">
-              <div id="modslot">
-                  <a href="https://spiteful1277.neocities.org/Incredible%20Box%20V2%20Mix%20Version">
-                      <img src="../imgs/incrediblegame.png" class="icon" width="125px" height="125px">
-                      </img>
-                  </a>
-                  <span>Hahahaha</span>
-                  <span style="opacity: 0%;">I want to see him again</span>
-              </div>
+        <div class="grid-item">
+            <button id="modslot">
+                <a href="https://spiteful1277.neocities.org/Incredible%20Box%20V2%20Mix%20Version">
+                    <img src="../imgs/incrediblegame.png" class="icon" width="125px" height="125px">
+                    </img>
+                </a>
+                <span>Hahahaha</span>
+                <span style="opacity: 0%;">I want to see him again</span>
+            </button>
 
-              <div>
+            <div>
                 <h4>Incredible Sensation</h4>
-              </div>
-          </div>
-      </div>
-        
-      <br>
-      
-      <div class="grid-container">
-          <div class="grid-item">
-              <div id="modslot">
-                  <a href="https://spiteful1277.neocities.org/Incredible%20Box%20V2%20Free%20OLD">
-                      <img src="../imgs/incrediblegame.png" class="icon" width="125px" height="125px">
-                      </img>
-                  </a>
-                  <span>Incredible OLD</span>
-              </div>
+            </div>
+        </div>
+    </div>
 
-              <div>
+    <br>
+
+    <div class="grid-container">
+        <div class="grid-item">
+            <button id="modslot">
+                <a href="https://spiteful1277.neocities.org/Incredible%20Box%20V2%20Free%20OLD">
+                    <img src="../imgs/incrediblegame.png" class="icon" width="125px" height="125px">
+                    </img>
+                </a>
+                <span>Incredible OLD</span>
+            </button>
+
+            <div>
                 <h4>Archive origin</h4>
-              </div>
-          </div>
-      </div>
-      
-      <footer>
-          <h3>Soon</h3>
-      </footer>
-  </body>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <h3>Soon</h3>
+    </footer>
+</body>
+
 </html>
