@@ -320,7 +320,7 @@
         var Unlock = new Audio("src/audio/unlock.wav");
         var locked = localStorage.locked == undefined ? true : false;
 
-        document.getElementById(":(").innerHTML = window.location.hash == "#preload" ? "" : ":(";
+        document.getElementById(":(").innerHTML = localStorage.locked == undefined ? ":()" : "";
 
         var musicloaded = false;
 
