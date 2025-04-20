@@ -318,7 +318,7 @@
 
     <script>
         var Unlock = new Audio("src/audio/unlock.wav");
-        var locked = localStorage.locked == null ? true : false;
+        var locked = localStorage.locked == undefined ? true : false;
 
         document.getElementById(":(").innerHTML = window.location.hash == "#preload" ? "" : ":(";
 
@@ -337,9 +337,7 @@
             locked = false;
 
             if (typeof (Storage) !== "undefined") {
-                if (localStorage.locked) {
-                    localStorage.locked = false;
-                }
+                localStorage.locked = false;
             } else {
                 console.log("Sorry, no Web storage support!");
             }
