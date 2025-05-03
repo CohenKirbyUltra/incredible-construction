@@ -88,7 +88,7 @@ class Character {
       container.style.border = "2px solid #333";
       container.style.padding = "15px";
       container.style.marginTop = "20px";
-      container.style.maxWidth = "400px";
+      container.style.maxWidth = "200px";
       container.style.fontFamily = "Arial, sans-serif";
   
       // Name
@@ -105,7 +105,7 @@ class Character {
       const img = document.createElement("img");
       img.src = this.imageSrc;
       img.alt = "Character Image";
-      img.style.maxWidth = "100%";
+      img.style.maxWidth = "50%";
       img.style.height = "auto";
       img.style.border = "1px solid #ccc";
       img.style.marginTop = "10px";
