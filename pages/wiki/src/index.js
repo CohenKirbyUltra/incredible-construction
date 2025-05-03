@@ -19,13 +19,7 @@ const tabs = {
 };
 
 
-const Locked = "███████";
-
-new Tab(tabs.versions);
-
-new Tab(tabs.modes.fale1);
-new Tab(tabs.modes.fale2);
-
+const Locked = "███████"
 
 const Characters = {
     names: [
@@ -175,3 +169,8 @@ function generate(chars, names, descriptions, srcs) {
 }
 
 generate(20);
+
+new Tab(tabs.versions);
+
+new Tab(tabs.modes.fale1);
+new Tab(tabs.modes.fale2);
