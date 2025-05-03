@@ -118,7 +118,7 @@ function generate(chars, names, descriptions, srcs) {
     }
 }
 
-class chars() {
+class chars {
     generate(chars, version, mode) {
         for (let index = 0; index < chars; index++) {
             new Character(this.getVer(int, "names", index), this.getVer(int, "descriptions", index), this.getVer(int, "srcs", index));
@@ -126,7 +126,7 @@ class chars() {
     }
 
     clear() {
-        document.getElementsByClassName("char").forEach(element => {
+        document.getElementsByClassName("char").forEach((element) => {
             try {
                 document.body.removeChild(element);                
             } catch {
