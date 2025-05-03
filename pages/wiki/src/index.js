@@ -1,4 +1,31 @@
-const tabs = ["Versions", "Modes"];
+const tabs = {
+    versions:   [
+        "Fale 1", 
+        "Fale 2"
+    ]
+    modes: {
+        fale1: [
+            "New", 
+            "Legacy", 
+            "Legacy Mixer"
+        ],
+
+        fale2: [
+            "New",
+            "Legacy",
+            "Legacy Mixer"
+        ]
+    }
+};
+
+
+const Locked = "███████";
+
+new Tab(tabs.versions);
+
+new Tab(tabs.modes.fale1);
+new Tab(tabs.modes.fale2);
+
 
 const Characters = {
     names: [
@@ -69,6 +96,12 @@ const Characters = {
     ]
 }
 
+class Elem {
+    constructor(element) {
+        return document.createElement(element.toUpperCase());
+    }
+}
+
 class Character {
     constructor(name, description, imageSrc) {
       if (!name || !description || !imageSrc) {
@@ -112,6 +145,26 @@ class Character {
       container.appendChild(img);
   
       document.body.appendChild(container);
+    }
+}
+
+class Tab {
+    constructor(options, id) {
+        let select = new Elem("select");
+        
+        if (id !== null || id !== undefined || id !== "") {
+            select.id = id;
+        }
+
+        options.forEach((element, index) => {
+            let option = new Elem("option");
+            option.value = element.toLowerCase();
+            option.innerHTML = element;
+
+            select.appendChild(option);
+        });
+
+        document.body.appendChild(select);
     }
 }
   
