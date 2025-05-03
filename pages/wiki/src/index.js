@@ -1,3 +1,5 @@
+var index;
+
 const tabs = {
     versions:   [
         "Fale 1", 
@@ -269,7 +271,7 @@ function generate(chars, names, descriptions, srcs) {
 class chars() {
     generate(chars, version, mode) {
         for (let index = 0; index < chars; index++) {
-            new Character(this.getVer(version, "names"), this.getVer(version, "descriptions"), this.getVer(version, "srcs"));
+            new Character(this.getVer(index, 0), this.getVer(index, 1), this.getVer(index, 2));
         }        
     }
 
@@ -284,16 +286,14 @@ class chars() {
     }
 
     getVer(_version, _var) {
-        return Chars._var[0][_version];
+        return Chars[_var][0][_version];
     }
 }
-
-var index;
 
 function update(version) {
     switch (version) {
         case 1:
-            index = 1;
+            index = 0;
 
             ver1.enabled = false;
             ver2.enabled = true;
@@ -303,7 +303,7 @@ function update(version) {
             chars.generate(20, "fale1");
             break;
         case 2:
-            index = 2;
+            index = 1;
 
             ver1.enabled = true;
             ver2.enabled = false;
@@ -314,7 +314,7 @@ function update(version) {
             break;
     
         default:
-            index = 1;
+            index = 0;
             
             ver1.enabled = false;
             ver2.enabled = true;
