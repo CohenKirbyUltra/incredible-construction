@@ -28,10 +28,10 @@ const Locked = "███████"
 const charPrefix = "imgs/Characters/";
 
 // nerd shit
-const Chars = new Object({
-    names = [
-        version = [
-                Fale1 = [
+const Chars = [
+    [
+        [
+                [
                     "Duggie",
                     "Reverse",
                     "Inverse",
@@ -52,9 +52,8 @@ const Chars = new Object({
                     "David J",
                     "Spite",
                     "Melancholy"
-                ],
-
-                Fale2 = [
+                ]
+                [
                     "Duggie",
                     "Reverse",
                     "Inverse",
@@ -77,10 +76,10 @@ const Chars = new Object({
                     "Melancholy"
                 ]
             ]
-    ],
-    descriptions = [
-        version = [
-                Fale1 = [
+    ]
+    [
+        [
+                [
                     "Placeholder",
                     "Placeholder",
                     "Placeholder",
@@ -101,9 +100,8 @@ const Chars = new Object({
                     "Placeholder",
                     "Placeholder",
                     "Placeholder"
-                ],
-
-                Fale2 = [
+                ]
+                [
                     "Placeholder",
                     "Placeholder",
                     "Placeholder",
@@ -127,10 +125,10 @@ const Chars = new Object({
                 ]
             ]
         ]
-    ],
-    srcs = [
-        version = [
-                Fale1 = [
+    ]
+    [
+        [
+                [
                     `${charPrefix}.Placeholder.png`,
                     `${charPrefix}.Placeholder.png`,
                     `${charPrefix}.Placeholder.png`,
@@ -151,9 +149,8 @@ const Chars = new Object({
                     `${charPrefix}.Placeholder.png`,
                     `${charPrefix}.Placeholder.png`,
                     `${charPrefix}.Placeholder.png`
-                ],
-
-                Fale2 = [
+                ]
+                [
                     `${charPrefix}.Placeholder.png`,
                     `${charPrefix}.Placeholder.png`,
                     `${charPrefix}.Placeholder.png`,
@@ -176,8 +173,8 @@ const Chars = new Object({
                     `${charPrefix}.Placeholder.png`
                 ]
         ]
-    ];
-});
+    ]
+];
 
 class Elem {
     constructor(element) {
