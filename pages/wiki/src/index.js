@@ -30,9 +30,9 @@ const Locked = "███████"
 const charPrefix = "imgs/Characters/";
 
 // nerd shit
-const Chars = [
-    [
+const Chars = new Array(
         [
+            [
                 [
                     "Duggie",
                     "Reverse",
@@ -77,7 +77,7 @@ const Chars = [
                     "Spite",
                     "Melancholy"
                 ]
-            ]
+        ]
     ]
     [
         [
@@ -176,7 +176,7 @@ const Chars = [
                 ]
         ]
     ]
-];
+);
 
 class Elem {
     constructor(element) {
