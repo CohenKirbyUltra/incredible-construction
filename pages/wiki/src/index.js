@@ -2,7 +2,7 @@ const tabs = {
     versions:   [
         "Fale 1", 
         "Fale 2"
-    ]
+    ],
     modes: {
         fale1: [
             "New", 
