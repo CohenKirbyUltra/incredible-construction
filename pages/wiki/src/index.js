@@ -1,24 +1,4 @@
-var index;
-
-const tabs = {
-    versions:   [
-        "Fale 1", 
-        "Fale 2"
-    ],
-    modes: {
-        fale1: [
-            "New", 
-            "Legacy", 
-            "Legacy Mixer"
-        ],
-
-        fale2: [
-            "New",
-            "Legacy",
-            "Legacy Mixer"
-        ]
-    }
-};
+var int;
 
 const ver1 = document.getElementById("ver1");
 const ver2 = document.getElementById("ver2");
@@ -27,156 +7,26 @@ const title = document.getElementById("title");
 
 const Locked = "███████"
 
-const charPrefix = "imgs/Characters/";
-
 // nerd shit
-const Chars = new Array(
-        [
-            [
-                [
-                    "Duggie",
-                    "Reverse",
-                    "Inverse",
-                    "Splitcase",
-                    "Noah T.",
-                    "Div",
-                    "Lu",
-                    "Fierce",
-                    "Hinge",
-                    "Calling",
-                    "Vase",
-                    "Jason",
-                    "Vivisection",
-                    "Nihility",
-                    "Zenith",
-                    "Gelica",
-                    "Null",
-                    "David J",
-                    "Spite",
-                    "Melancholy"
-                ]
-                [
-                    "Duggie",
-                    "Reverse",
-                    "Inverse",
-                    "Splitcase",
-                    "Noah T.",
-                    "Div",
-                    "Lu",
-                    "Fierce",
-                    "Hinge",
-                    "Calling",
-                    "Vase",
-                    "Jason",
-                    "Vivisection",
-                    "Nihility",
-                    "Zenith",
-                    "Gelica",
-                    "Null",
-                    "David J",
-                    "Spite",
-                    "Melancholy"
-                ]
+class Chars {
+    constructor() {
+        const charPrefix = "imgs/Characters/";
+        this.names = [
+            ["Duggie","Reverse","Inverse","Splitcase","Noah T.","Div","Lu","Fierce","Hinge","Calling","Vase","Jason","Vivisection","Nihility","Zenith","Gelica","Null","David J","Spite","Melancholy"]
+            ["Duggie","Reverse","Inverse","Splitcase","Noah T.","Div","Lu","Fierce","Hinge","Calling","Vase","Jason","Vivisection","Nihility","Zenith","Gelica","Null","David J","Spite","Melancholy"]
+        ],
+        this.descriptions = [
+            ["Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder"],
+            ["Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder"]
+        ],
+        this.srcs = [
+            [`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`],
+            [`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`]
         ]
-    ]
-    [
-        [
-                [
-                    "Placeholder",
-                    "Placeholder",
-                    "Placeholder",
-                    "Placeholder",
-                    "Placeholder",
-                    "Placeholder",
-                    "Placeholder",
-                    "Placeholder",
-                    "Placeholder",
-                    "Placeholder",
-                    "Placeholder",
-                    "Placeholder",
-                    "Placeholder",
-                    "Placeholder",
-                    "Placeholder",
-                    "Placeholder",
-                    "Placeholder",
-                    "Placeholder",
-                    "Placeholder",
-                    "Placeholder"
-                ]
-                [
-                    "Placeholder",
-                    "Placeholder",
-                    "Placeholder",
-                    "Placeholder",
-                    "Placeholder",
-                    "Placeholder",
-                    "Placeholder",
-                    "Placeholder",
-                    "Placeholder",
-                    "Placeholder",
-                    "Placeholder",
-                    "Placeholder",
-                    "Placeholder",
-                    "Placeholder",
-                    "Placeholder",
-                    "Placeholder",
-                    "Placeholder",
-                    "Placeholder",
-                    "Placeholder",
-                    "Placeholder"
-                ]
-            ]
-        ]
-    ]
-    [
-        [
-                [
-                    `${charPrefix}.Placeholder.png`,
-                    `${charPrefix}.Placeholder.png`,
-                    `${charPrefix}.Placeholder.png`,
-                    `${charPrefix}.Placeholder.png`,
-                    `${charPrefix}.Placeholder.png`,
-                    `${charPrefix}.Placeholder.png`,
-                    `${charPrefix}.Placeholder.png`,
-                    `${charPrefix}.Placeholder.png`,
-                    `${charPrefix}.Placeholder.png`,
-                    `${charPrefix}.Placeholder.png`,
-                    `${charPrefix}.Placeholder.png`,
-                    `${charPrefix}.Placeholder.png`,
-                    `${charPrefix}.Placeholder.png`,
-                    `${charPrefix}.Placeholder.png`,
-                    `${charPrefix}.Placeholder.png`,
-                    `${charPrefix}.Placeholder.png`,
-                    `${charPrefix}.Placeholder.png`,
-                    `${charPrefix}.Placeholder.png`,
-                    `${charPrefix}.Placeholder.png`,
-                    `${charPrefix}.Placeholder.png`
-                ]
-                [
-                    `${charPrefix}.Placeholder.png`,
-                    `${charPrefix}.Placeholder.png`,
-                    `${charPrefix}.Placeholder.png`,
-                    `${charPrefix}.Placeholder.png`,
-                    `${charPrefix}.Placeholder.png`,
-                    `${charPrefix}.Placeholder.png`,
-                    `${charPrefix}.Placeholder.png`,
-                    `${charPrefix}.Placeholder.png`,
-                    `${charPrefix}.Placeholder.png`,
-                    `${charPrefix}.Placeholder.png`,
-                    `${charPrefix}.Placeholder.png`,
-                    `${charPrefix}.Placeholder.png`,
-                    `${charPrefix}.Placeholder.png`,
-                    `${charPrefix}.Placeholder.png`,
-                    `${charPrefix}.Placeholder.png`,
-                    `${charPrefix}.Placeholder.png`,
-                    `${charPrefix}.Placeholder.png`,
-                    `${charPrefix}.Placeholder.png`,
-                    `${charPrefix}.Placeholder.png`,
-                    `${charPrefix}.Placeholder.png`
-                ]
-        ]
-    ]
-);
+    }
+}
+
+const Characters = new Chars();
 
 class Elem {
     constructor(element) {
@@ -271,7 +121,7 @@ function generate(chars, names, descriptions, srcs) {
 class chars() {
     generate(chars, version, mode) {
         for (let index = 0; index < chars; index++) {
-            new Character(this.getVer(index, 0), this.getVer(index, 1), this.getVer(index, 2));
+            new Character(this.getVer(int, "names", index), this.getVer(int, "descriptions", index), this.getVer(int, "srcs", index));
         }        
     }
 
@@ -285,8 +135,8 @@ class chars() {
         });
     }
 
-    getVer(_version, _var) {
-        return Chars[_var][0][_version];
+    getVer(_version, _var, index) {
+        return Characters._var[0][index];
     }
 }
 
