@@ -54,7 +54,7 @@ const Chars = new Object({
                     "Melancholy"
                 ],
 
-                this.Fale2: [
+                Fale2 = [
                     "Duggie",
                     "Reverse",
                     "Inverse",
@@ -79,8 +79,8 @@ const Chars = new Object({
             ]
     ],
     descriptions = [
-        this.version = [
-                this.Fale1 = [
+        version = [
+                Fale1 = [
                     "Placeholder",
                     "Placeholder",
                     "Placeholder",
@@ -103,7 +103,7 @@ const Chars = new Object({
                     "Placeholder"
                 ],
 
-                this.Fale2 = [
+                Fale2 = [
                     "Placeholder",
                     "Placeholder",
                     "Placeholder",
