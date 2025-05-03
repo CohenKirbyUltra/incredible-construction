@@ -21,72 +21,162 @@ const tabs = {
 
 const Locked = "███████"
 
+const charPrefix = "imgs/Characters/";
+
+// nerd shit
 const Characters = {
     names: [
-        "Duggie",
-        "Reverse",
-        "Inverse",
-        "Splitcase",
-        "Noah T.",
-        "Div",
-        "Lu",
-        "Fierce",
-        "Hinge",
-        "Calling",
-        "Vase",
-        "Jason",
-        "Vivisection",
-        "Nihility",
-        "Zenith",
-        "Gelica",
-        "Null",
-        "David J",
-        "Spite",
-        "Melancholy"
+        version: [
+            {
+                Fale1: [
+                    "Duggie",
+                    "Reverse",
+                    "Inverse",
+                    "Splitcase",
+                    "Noah T.",
+                    "Div",
+                    "Lu",
+                    "Fierce",
+                    "Hinge",
+                    "Calling",
+                    "Vase",
+                    "Jason",
+                    "Vivisection",
+                    "Nihility",
+                    "Zenith",
+                    "Gelica",
+                    "Null",
+                    "David J",
+                    "Spite",
+                    "Melancholy"
+                ],
+
+                Fale2: [
+                    "Duggie",
+                    "Reverse",
+                    "Inverse",
+                    "Splitcase",
+                    "Noah T.",
+                    "Div",
+                    "Lu",
+                    "Fierce",
+                    "Hinge",
+                    "Calling",
+                    "Vase",
+                    "Jason",
+                    "Vivisection",
+                    "Nihility",
+                    "Zenith",
+                    "Gelica",
+                    "Null",
+                    "David J",
+                    "Spite",
+                    "Melancholy"
+                ]
+            }
+        ]
     ],
     descriptions: [
-        "Placeholder",
-        "Placeholder",
-        "Placeholder",
-        "Placeholder",
-        "Placeholder",
-        "Placeholder",
-        "Placeholder",
-        "Placeholder",
-        "Placeholder",
-        "Placeholder",
-        "Placeholder",
-        "Placeholder",
-        "Placeholder",
-        "Placeholder",
-        "Placeholder",
-        "Placeholder",
-        "Placeholder",
-        "Placeholder",
-        "Placeholder",
-        "Placeholder"
+        version: [
+            {
+                Fale1: [
+                    "Placeholder",
+                    "Placeholder",
+                    "Placeholder",
+                    "Placeholder",
+                    "Placeholder",
+                    "Placeholder",
+                    "Placeholder",
+                    "Placeholder",
+                    "Placeholder",
+                    "Placeholder",
+                    "Placeholder",
+                    "Placeholder",
+                    "Placeholder",
+                    "Placeholder",
+                    "Placeholder",
+                    "Placeholder",
+                    "Placeholder",
+                    "Placeholder",
+                    "Placeholder",
+                    "Placeholder"
+                ],
+
+                Fale2: [
+                    "Placeholder",
+                    "Placeholder",
+                    "Placeholder",
+                    "Placeholder",
+                    "Placeholder",
+                    "Placeholder",
+                    "Placeholder",
+                    "Placeholder",
+                    "Placeholder",
+                    "Placeholder",
+                    "Placeholder",
+                    "Placeholder",
+                    "Placeholder",
+                    "Placeholder",
+                    "Placeholder",
+                    "Placeholder",
+                    "Placeholder",
+                    "Placeholder",
+                    "Placeholder",
+                    "Placeholder"
+                ]
+            }
+        ]
     ],
     srcs: [
-        "src/imgs/deada.png",
-        "src/imgs/deada.png",
-        "src/imgs/deada.png",
-        "src/imgs/deada.png",
-        "src/imgs/deada.png",
-        "src/imgs/deada.png",
-        "src/imgs/deada.png",
-        "src/imgs/deada.png",
-        "src/imgs/deada.png",
-        "src/imgs/deada.png",
-        "src/imgs/deada.png",
-        "src/imgs/deada.png",
-        "src/imgs/deada.png",
-        "src/imgs/deada.png",
-        "src/imgs/deada.png",
-        "src/imgs/deada.png",
-        "src/imgs/deada.png",
-        "src/imgs/deada.png",
-        "src/imgs/deada.png",
-        "src/imgs/deada.png"
+        version: [
+            {
+                Fale1: [
+                    `${charPrefix}.Placeholder.png`,
+                    `${charPrefix}.Placeholder.png`,
+                    `${charPrefix}.Placeholder.png`,
+                    `${charPrefix}.Placeholder.png`,
+                    `${charPrefix}.Placeholder.png`,
+                    `${charPrefix}.Placeholder.png`,
+                    `${charPrefix}.Placeholder.png`,
+                    `${charPrefix}.Placeholder.png`,
+                    `${charPrefix}.Placeholder.png`,
+                    `${charPrefix}.Placeholder.png`,
+                    `${charPrefix}.Placeholder.png`,
+                    `${charPrefix}.Placeholder.png`,
+                    `${charPrefix}.Placeholder.png`,
+                    `${charPrefix}.Placeholder.png`,
+                    `${charPrefix}.Placeholder.png`,
+                    `${charPrefix}.Placeholder.png`,
+                    `${charPrefix}.Placeholder.png`,
+                    `${charPrefix}.Placeholder.png`,
+                    `${charPrefix}.Placeholder.png`,
+                    `${charPrefix}.Placeholder.png`
+                ],
+
+                Fale2: [
+                    `${charPrefix}.Placeholder.png`,
+                    `${charPrefix}.Placeholder.png`,
+                    `${charPrefix}.Placeholder.png`,
+                    `${charPrefix}.Placeholder.png`,
+                    `${charPrefix}.Placeholder.png`,
+                    `${charPrefix}.Placeholder.png`,
+                    `${charPrefix}.Placeholder.png`,
+                    `${charPrefix}.Placeholder.png`,
+                    `${charPrefix}.Placeholder.png`,
+                    `${charPrefix}.Placeholder.png`,
+                    `${charPrefix}.Placeholder.png`,
+                    `${charPrefix}.Placeholder.png`,
+                    `${charPrefix}.Placeholder.png`,
+                    `${charPrefix}.Placeholder.png`,
+                    `${charPrefix}.Placeholder.png`,
+                    `${charPrefix}.Placeholder.png`,
+                    `${charPrefix}.Placeholder.png`,
+                    `${charPrefix}.Placeholder.png`,
+                    `${charPrefix}.Placeholder.png`,
+                    `${charPrefix}.Placeholder.png`
+                ]
+            }
+        ]
     ]
 }
 
@@ -117,6 +207,7 @@ class Character {
       container.style.marginTop = "20px";
       container.style.maxWidth = "200px";
       container.style.fontFamily = "Arial, sans-serif";
+      container.class = "char";
   
       // Name
       const title = document.createElement("h3");
@@ -143,22 +234,33 @@ class Character {
 }
 
 class Tab {
-    constructor(options, id) {
-        let select = new Elem("select");
+    constructor(options, id, container) {
+        this.select = new Elem("select");
         
         if (id !== null || id !== undefined || id !== "") {
-            select.id = id;
+            this.select.id = id;
         }
 
         options.forEach((element, index) => {
-            let option = new Elem("option");
-            option.value = element.toLowerCase();
-            option.innerHTML = element;
+            this.option = new Elem("option");
+            this.option.value = element.toLowerCase();
+            this.option.innerHTML = element;
 
-            select.appendChild(option);
+            this.select.appendChild(this.option);
         });
 
-        document.body.appendChild(select);
+        if (container !== null || container !== undefined || container !== "") {
+            this.container = new Elem("div");
+            this.container.class = "grid-container";
+            this.select.class = "grid-item";
+
+            this.container.appendChild(this.select);
+
+            document.body.appendChild(this.container);
+            return;
+        }
+
+        document.body.appendChild(this.select);
     }
 }
   
@@ -168,9 +270,27 @@ function generate(chars, names, descriptions, srcs) {
     }
 }
 
-generate(20);
+class chars() {
+    generate(chars, version, mode) {
+        for (let index = 0; index < chars; index++) {
+            new Character(this.getVer(version, "names"), this.getVer(version, "descriptions"), this.getVer(version, "srcs"));
+        }        
+    }
 
-new Tab(tabs.versions);
+    clear() {
+        document.getElementsByClassName("char").forEach((element) => {
+            document.body.removeChild(element);
+        });
+    }
 
-new Tab(tabs.modes.fale1);
-new Tab(tabs.modes.fale2);
+    getVer(_version, _var) {
+        return Characters._var._version;
+    }
+}
+
+const Versions = new Tab(tabs.versions);
+
+const Tab1 = new Tab(tabs.modes.fale1);
+const Tab2 = new Tab(tabs.modes.fale2);
+
+new chars.generate(20, document.getElementById(Versions.select.id).value);
