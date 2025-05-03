@@ -18,17 +18,20 @@ const tabs = {
     }
 };
 
+const ver1 = document.getElementById("ver1");
+const ver2 = document.getElementById("ver2");
+
+const title = document.getElementById("title");
 
 const Locked = "███████"
 
 const charPrefix = "imgs/Characters/";
 
 // nerd shit
-const Characters = {
-    names: [
-        version: [
-            {
-                Fale1: [
+const Chars = new Object({
+    names = [
+        version = [
+                Fale1 = [
                     "Duggie",
                     "Reverse",
                     "Inverse",
@@ -51,7 +54,7 @@ const Characters = {
                     "Melancholy"
                 ],
 
-                Fale2: [
+                this.Fale2: [
                     "Duggie",
                     "Reverse",
                     "Inverse",
@@ -73,13 +76,11 @@ const Characters = {
                     "Spite",
                     "Melancholy"
                 ]
-            }
-        ]
+            ]
     ],
-    descriptions: [
-        version: [
-            {
-                Fale1: [
+    descriptions = [
+        this.version = [
+                this.Fale1 = [
                     "Placeholder",
                     "Placeholder",
                     "Placeholder",
@@ -102,7 +103,7 @@ const Characters = {
                     "Placeholder"
                 ],
 
-                Fale2: [
+                this.Fale2 = [
                     "Placeholder",
                     "Placeholder",
                     "Placeholder",
@@ -124,13 +125,12 @@ const Characters = {
                     "Placeholder",
                     "Placeholder"
                 ]
-            }
+            ]
         ]
     ],
-    srcs: [
-        version: [
-            {
-                Fale1: [
+    srcs = [
+        version = [
+                Fale1 = [
                     `${charPrefix}.Placeholder.png`,
                     `${charPrefix}.Placeholder.png`,
                     `${charPrefix}.Placeholder.png`,
@@ -153,7 +153,7 @@ const Characters = {
                     `${charPrefix}.Placeholder.png`
                 ],
 
-                Fale2: [
+                Fale2 = [
                     `${charPrefix}.Placeholder.png`,
                     `${charPrefix}.Placeholder.png`,
                     `${charPrefix}.Placeholder.png`,
@@ -175,10 +175,9 @@ const Characters = {
                     `${charPrefix}.Placeholder.png`,
                     `${charPrefix}.Placeholder.png`
                 ]
-            }
         ]
-    ]
-}
+    ];
+});
 
 class Elem {
     constructor(element) {
@@ -229,7 +228,7 @@ class Character {
       img.style.marginTop = "10px";
       container.appendChild(img);
   
-      document.body.appendChild(container);
+      document.getElementById("gridcontainer").appendChild(container);
     }
 }
 
@@ -279,18 +278,67 @@ class chars() {
 
     clear() {
         document.getElementsByClassName("char").forEach((element) => {
-            document.body.removeChild(element);
+            try {
+                document.body.removeChild(element);                
+            } catch {
+                
+            }
         });
     }
 
     getVer(_version, _var) {
-        return Characters._var._version;
+        return Chars._var[0][_version];
     }
 }
 
-const Versions = new Tab(tabs.versions);
+var index;
 
-const Tab1 = new Tab(tabs.modes.fale1);
-const Tab2 = new Tab(tabs.modes.fale2);
+function update(version) {
+    switch (version) {
+        case 1:
+            index = 1;
+
+            ver1.enabled = false;
+            ver2.enabled = true;
+
+            title.innerHTML = "Fale 1";
+
+            chars.generate(20, "fale1");
+            break;
+        case 2:
+            index = 2;
+
+            ver1.enabled = true;
+            ver2.enabled = false;
+
+            title.innerHTML = "Fale 2";
+
+            chars.generate(20, "fale2");
+            break;
+    
+        default:
+            index = 1;
+            
+            ver1.enabled = false;
+            ver2.enabled = true;
+
+            title.innerHTML = "Fale 1";
+
+            chars.generate(20, "fale1");
+            break;
+    }
+}
+
+update();
+
+ver1.addEventListener("click", () => {
+    update(1)
+});
+
+ver2.addEventListener("click", () => {
+    update(2)
+});
+
+
 
 new chars.generate(20, document.getElementById(Versions.select.id).value);
