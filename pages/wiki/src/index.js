@@ -121,4 +121,4 @@ function generate(chars, names, descriptions, srcs) {
     }
 }
 
-generate(Character.names.length);
+generate(20);
