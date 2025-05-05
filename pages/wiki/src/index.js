@@ -111,33 +111,27 @@ class Tab {
         document.body.appendChild(this.select);
     }
 }
-  
-function generate(chars, names, descriptions, srcs) {
-    for (let index = 0; index < chars; index++) {
-        new Character(Characters.names[index], Characters.descriptions[index], Characters.srcs[index]);
-    }
+
+function getVer(_version, _var, index) {
+    return Characters._var[0][index];
 }
 
-class chars {
-    generate(chars, version, mode) {
-        for (let index = 0; index < chars; index++) {
-            new Character(this.getVer(int, "names", index), this.getVer(int, "descriptions", index), this.getVer(int, "srcs", index));
-        }        
-    }
+function generate(chars, version, mode) {
+    let tempFunction = new Character();
 
-    clear() {
-        document.getElementsByClassName("char").forEach((element) => {
-            try {
-                document.body.removeChild(element);                
-            } catch {
+    for (let index = 0; index < chars; index++) {
+        this.getVer(int, "names", index), this.getVer(int, "descriptions", index), this.getVer(int, "srcs", index));
+    }        
+}
+
+function clear() {
+    document.getElementsByClassName("char").forEach((element) => {
+        try {
+            document.body.removeChild(element);                
+        } catch {
                 
-            }
-        });
-    }
-
-    getVer(_version, _var, index) {
-        return Characters._var[0][index];
-    }
+        }
+    });
 }
 
 const functions = new chars();
@@ -178,7 +172,7 @@ function update(version) {
     }
 }
 
-update();
+update(1);
 
 ver1.addEventListener("click", () => {
     update(1)
