@@ -140,6 +140,8 @@ class chars {
     }
 }
 
+const functions = new chars();
+
 function update(version) {
     switch (version) {
         case 1:
@@ -150,7 +152,7 @@ function update(version) {
 
             title.innerHTML = "Fale 1";
 
-            chars.generate(20, "fale1");
+            functions.generate(20, "fale1");
             break;
         case 2:
             index = 1;
@@ -160,7 +162,7 @@ function update(version) {
 
             title.innerHTML = "Fale 2";
 
-            chars.generate(20, "fale2");
+            functions.generate(20, "fale2");
             break;
     
         default:
@@ -171,7 +173,7 @@ function update(version) {
 
             title.innerHTML = "Fale 1";
 
-            chars.generate(20, "fale1");
+            functions.generate(20, "fale1");
             break;
     }
 }
@@ -188,4 +190,4 @@ ver2.addEventListener("click", () => {
 
 
 
-new chars.generate(20, document.getElementById(Versions.select.id).value);
+functions.generate(20, document.getElementById(Versions.select.id).value);
