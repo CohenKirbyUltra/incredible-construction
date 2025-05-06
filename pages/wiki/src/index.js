@@ -183,16 +183,11 @@ function byID(id) {
 function clear() {
     let a = document.getElementById("gridcontainer");
 
-    try {
-        Array.from(a.childNodes).forEach(element => {
-            if (!Array.from(a.getElementsByClassName("avoid").includes(element))) {
-                a.removeChild(element);
-            }                
-        });    
-    } catch (error) {
-        throw console.error(error);
-    }
-
+    Array.from(a.childNodes).forEach(element => {
+        if (!Array.from(a.getElementsByClassName("avoid")).includes(element)) {
+            a.removeChild(element);
+        }                
+    });
 }
 
 function update(version) {
