@@ -7,6 +7,11 @@ const title = document.getElementById("title");
 
 const Locked = "███████"
 
+function clamp(a, b, c) {
+    return a <= b && a >= c;
+}
+
+
 // nerd shit
 class Chars {
     constructor() {
@@ -35,7 +40,7 @@ class Elem {
 }
 
 class Character {
-    constructor(name, description, imageSrc) {
+    constructor(name, description, imageSrc, _index) {
       if (!name || !description || !imageSrc) {
         console.error("All parameters (name, description, imageSrc) are required.");
         return;
@@ -45,10 +50,10 @@ class Character {
       this.description = description;
       this.imageSrc = imageSrc;
   
-      this.render();
+      this.render(_index);
     }
   
-    render() {
+    render(i) {
       let container = document.createElement("div");
       container.className = "char";
       container.style.border = "2px solid #333";
@@ -81,8 +86,27 @@ class Character {
       btn.className = "btn_a";
       btn.id = this.name;
       btn.appendChild(container);
-  
-      document.getElementById("gridcontainer").appendChild(btn);
+
+      if (clamp(i, 4, 0)) {
+        document.getElementById("beats").appendChild(btn); 
+        document.getElementById("beats_label").innerHTML = "Beats";
+      }
+      if (clamp(i, 9, 5)) {
+        document.getElementById("effects").appendChild(btn); 
+        document.getElementById("effects_label").innerHTML = "Effects";
+      }
+      if (clamp(i, 14, 10)) {
+        document.getElementById("melodies").appendChild(btn); 
+        document.getElementById("melodies_label").innerHTML = "Melodies";
+      }
+      if (clamp(i, 19, 15)) {
+        document.getElementById("voices").appendChild(btn); 
+        document.getElementById("voices_label").innerHTML = "Voices";
+      }
+      if (clamp(i, 24, 20)) {
+        document.getElementById("extras").appendChild(btn); 
+        document.getElementById("extras_label").innerHTML = "Extras";
+      }
     }
 }
 
@@ -148,7 +172,7 @@ function generate(chars, version, mode) {
 
     // generate more
     for (let index = 0; index < chars; index++) {
-        let x = new Character(getVer(int, "names", index), getVer(int, "descriptions", index), getVer(int, "srcs", index));
+        let x = new Character(getVer(int, "names", index), getVer(int, "descriptions", index), getVer(int, "srcs", index), index);
     }       
 }
 
