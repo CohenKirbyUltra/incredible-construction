@@ -80,7 +80,7 @@ class Character {
       let btn = document.createElement("button");
       btn.className = "btn_a";
       btn.id = this.name;
-      document.body.insertBefore(btn, container)
+      btn.appendChild(container);
   
       document.getElementById("gridcontainer").appendChild(btn);
     }
