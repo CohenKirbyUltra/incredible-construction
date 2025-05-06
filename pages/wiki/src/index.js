@@ -113,12 +113,30 @@ class Tab {
 }
 
 function getVer(_version, _var, index) {
-    return Characters._var[0][index];
+    let c = new Chars();
+
+    switch (_var) {
+        case "names":
+            return c.names[_version][index];
+        break;
+
+        case "descriptions":
+            return c.descriptions[_versions][index];
+        break;
+
+        case "srcs":
+            return c.srcs[_versions][index];       
+        break;
+        
+        default:
+            throw error("No variable was found. try 'names' 'descriptions' or 'srcs'");
+            break;
+    }
 }
 
 function generate(chars, version, mode) {
     for (let index = 0; index < chars; index++) {
-        let x = new Character(getVer(int, "names", index), getVer(int, "descriptions", index), getVer(int, "srcs", index))
+        let x = new Character(getVer(int, "names", index), getVer(int, "descriptions", index), getVer(int, "srcs", index));
     }       
 }
 
