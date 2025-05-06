@@ -159,7 +159,7 @@ function clear() {
         Array.from(a.childNodes).forEach(element => {
             a.removeChild(element);                
         });    
-    } catch () {
+    } catch (error) {
         throw console.warn("nothing was in the container. skipped.");
         
     }
