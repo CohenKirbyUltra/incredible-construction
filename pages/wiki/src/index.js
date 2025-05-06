@@ -49,26 +49,26 @@ class Character {
     }
   
     render() {
-      const container = document.createElement("div");
+      let container = document.createElement("div");
+      container.className = "char";
       container.style.border = "2px solid #333";
       container.style.padding = "15px";
       container.style.marginTop = "20px";
       container.style.maxWidth = "200px";
       container.style.fontFamily = "Arial, sans-serif";
-      container.class = "char";
   
       // Name
-      const title = document.createElement("h3");
+      let title = document.createElement("h3");
       title.textContent = this.name;
       container.appendChild(title);
   
       // Description
-      const desc = document.createElement("p");
+      let desc = document.createElement("p");
       desc.textContent = this.description;
       container.appendChild(desc);
   
       // Image
-      const img = document.createElement("img");
+      let img = document.createElement("img");
       img.src = this.imageSrc;
       img.alt = "Character Image";
       img.style.maxWidth = "50%";
@@ -100,7 +100,6 @@ class Tab {
         if (container !== null || container !== undefined || container !== "") {
             this.container = new Elem("div");
             this.container.class = "grid-container";
-            this.container.name = "char";
             this.select.class = "grid-item";
 
             this.container.appendChild(this.select);
@@ -143,7 +142,7 @@ function generate(chars, version, mode) {
 }
 
 function clear() {
-    document.getElementsByName("char").forEach((element) => {
+    document.getElementsByClassName("char").forEach((element) => {
         try {
             document.body.removeChild(element);                
         } catch {
