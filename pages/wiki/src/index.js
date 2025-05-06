@@ -100,6 +100,7 @@ class Tab {
         if (container !== null || container !== undefined || container !== "") {
             this.container = new Elem("div");
             this.container.class = "grid-container";
+            this.container.name = "char";
             this.select.class = "grid-item";
 
             this.container.appendChild(this.select);
@@ -142,7 +143,7 @@ function generate(chars, version, mode) {
 }
 
 function clear() {
-    document.getElementsByClassName("char").forEach((element) => {
+    document.getElementsByName("char").forEach((element) => {
         try {
             document.body.removeChild(element);                
         } catch {
