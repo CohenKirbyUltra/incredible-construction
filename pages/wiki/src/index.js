@@ -121,11 +121,11 @@ function getVer(_version, _var, index) {
         break;
 
         case "descriptions":
-            return c.descriptions[_versions][index];
+            return c.descriptions[_version][index];
         break;
 
         case "srcs":
-            return c.srcs[_versions][index];       
+            return c.srcs[_version][index];       
         break;
         
         default:
