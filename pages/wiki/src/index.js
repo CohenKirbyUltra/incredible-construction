@@ -190,7 +190,7 @@ function clear() {
             }                
         });    
     } catch (error) {
-        throw error("nothing was in the container. skipped.");
+        throw console.error(error);
     }
 
 }
