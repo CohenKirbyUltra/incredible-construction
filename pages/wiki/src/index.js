@@ -12,7 +12,7 @@ class Chars {
     constructor() {
         const charPrefix = "imgs/Characters/";
         this.names = [
-            ["Duggie","Reverse","Inverse","Splitcase","Noah T.","Div","Lu","Fierce","Hinge","Calling","Vase","Jason","Vivisection","Nihility","Zenith","Gelica","Null","David J","Spite","Melancholy"]
+            ["Duggie","Reverse","Inverse","Splitcase","Noah T.","Div","Lu","Fierce","Hinge","Calling","Vase","Jason","Vivisection","Nihility","Zenith","Gelica","Null","David J","Spite","Melancholy"],
             ["Duggie","Reverse","Inverse","Splitcase","Noah T.","Div","Lu","Fierce","Hinge","Calling","Vase","Jason","Vivisection","Nihility","Zenith","Gelica","Null","David J","Spite","Melancholy"]
         ],
         this.descriptions = [
