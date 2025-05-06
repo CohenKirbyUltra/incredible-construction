@@ -157,7 +157,7 @@ function byID(id) {
 }
 
 function clear() {
-    let a = document.byID("gridcontainer");
+    let a = document.getElementById("gridcontainer");
     let b = lists;
 
     try {
