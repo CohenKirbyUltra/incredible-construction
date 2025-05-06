@@ -76,8 +76,13 @@ class Character {
       img.style.border = "1px solid #ccc";
       img.style.marginTop = "10px";
       container.appendChild(img);
+
+      let btn = document.createElement("button");
+      btn.className = "btn_a";
+      btn.id = this.name;
+      document.body.insertBefore(btn, container)
   
-      document.getElementById("gridcontainer").appendChild(container);
+      document.getElementById("gridcontainer").appendChild(btn);
     }
 }
 
