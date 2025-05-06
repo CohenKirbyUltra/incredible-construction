@@ -166,8 +166,7 @@ function clear() {
             }                
         });    
     } catch (error) {
-        throw console.warn("nothing was in the container. skipped.");
-        
+        throw error("nothing was in the container. skipped.");
     }
 
 }
