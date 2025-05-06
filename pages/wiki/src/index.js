@@ -28,6 +28,24 @@ class Chars {
 
 const Characters = new Chars();
 
+const lists = {
+    divs: [
+        document.getElementById("gridcontainer").getElementById("beats"),
+        document.getElementById("gridcontainer").getElementById("effects"),
+        document.getElementById("gridcontainer").getElementById("melodies"),
+        document.getElementById("gridcontainer").getElementById("voices"),
+        document.getElementById("gridcontainer").getElementById("extras")
+    ],
+
+    labels: [
+        document.getElementById("gridcontainer").getElementById("beats").getElementById("beats_label"),
+        document.getElementById("gridcontainer").getElementById("effects").getElementById("effects_label"),
+        document.getElementById("gridcontainer").getElementById("melodies").getElementById("melodies_label"),
+        document.getElementById("gridcontainer").getElementById("voices").getElementById("voices_label"),
+        document.getElementById("gridcontainer").getElementById("extras").getElementById("extras_label")
+    ],    
+}
+
 class Elem {
     constructor(element) {
         return document.createElement(element.toUpperCase());
@@ -154,10 +172,13 @@ function generate(chars, version, mode) {
 
 function clear() {
     let a = document.getElementById("gridcontainer");
+    let b = lists;
 
     try {
         Array.from(a.childNodes).forEach(element => {
-            a.removeChild(element);                
+            if (!b.values(divs).includes(element) || !b.values(labels).includes(element)) {
+                a.removeChild(element);
+            }                
         });    
     } catch (error) {
         throw console.warn("nothing was in the container. skipped.");
