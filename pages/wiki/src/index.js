@@ -142,9 +142,9 @@ function generate(chars, version, mode) {
 }
 
 function clear() {
-    document.getElementsByClassName("char").forEach(element => {
+    Array.from(document.getElementsByClassName("char")).forEach(element => {
         try {
-            document.body.removeChild(element);                
+            document.removeChild(element);                
         } catch {
                 
         }
