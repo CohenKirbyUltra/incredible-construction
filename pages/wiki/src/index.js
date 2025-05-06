@@ -135,6 +135,7 @@ function getVer(_version, _var, index) {
 }
 
 function generate(chars, version, mode) {
+    let l = int;
     for (let index = 0; index < chars; index++) {
         let x = new Character(getVer(int, "names", index), getVer(int, "descriptions", index), getVer(int, "srcs", index));
     }       
@@ -153,7 +154,7 @@ function clear() {
 function update(version) {
     switch (version) {
         case 1:
-            index = 0;
+            int = 0;
 
             ver1.enabled = false;
             ver2.enabled = true;
@@ -163,7 +164,7 @@ function update(version) {
             generate(20, "fale1");
             break;
         case 2:
-            index = 1;
+            int = 1;
 
             ver1.enabled = true;
             ver2.enabled = false;
@@ -174,7 +175,7 @@ function update(version) {
             break;
     
         default:
-            index = 0;
+            int = 0;
             
             ver1.enabled = false;
             ver2.enabled = true;
@@ -197,5 +198,5 @@ ver2.addEventListener("click", () => {
 });
 
 
-
-generate(20, document.getElementById(Versions.select.id).value);
+int = 1;
+generate(20, int);
