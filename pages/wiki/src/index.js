@@ -144,7 +144,7 @@ function generate(chars, version, mode) {
 function clear() {
     Array.from(document.getElementsByClassName("char")).forEach(element => {
         try {
-            documenta.removeChild(element);                
+            document.removeChild(element);                
         } catch {
                 
         }
