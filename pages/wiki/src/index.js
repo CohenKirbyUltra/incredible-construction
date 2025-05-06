@@ -135,20 +135,30 @@ function getVer(_version, _var, index) {
 }
 
 function generate(chars, version, mode) {
+    // version index
     let l = int;
+
+    // swipe previous instance
+    clear();
+
+    // generate more
     for (let index = 0; index < chars; index++) {
         let x = new Character(getVer(int, "names", index), getVer(int, "descriptions", index), getVer(int, "srcs", index));
     }       
 }
 
 function clear() {
-    Array.from(document.getElementsByClassName("char")).forEach(element => {
-        try {
-            document.removeChild(element);                
-        } catch {
-                
-        }
-    });
+    let a = document.getElementById("gridcontainer");
+
+    try {
+        Array.from(a.childNodes).forEach(element => {
+            a.removeChild(element);                
+        });    
+    } catch () {
+        throw console.warn("nothing was in the container. skipped.");
+        
+    }
+
 }
 
 function update(version) {
