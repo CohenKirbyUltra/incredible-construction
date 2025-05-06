@@ -158,7 +158,6 @@ function byID(id) {
 
 function clear() {
     let a = document.getElementById("gridcontainer");
-    let b = lists;
 
     try {
         Array.from(a.childNodes).forEach(element => {
