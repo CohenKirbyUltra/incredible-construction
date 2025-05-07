@@ -183,7 +183,7 @@ function getVer(_version, _var, index) {
     }
 }
 
-function generate(chars, ltype, version, mode) {
+function generate(startchar, chars, ltype, version, mode) {
     // version index
     let l = int;
 
@@ -191,18 +191,18 @@ function generate(chars, ltype, version, mode) {
     clear();
 
     // generate more
-    for (let index = 0; index < chars; index++) {
-        let x = new Character(getVer(int, "names", index), getVer(int, "descriptions", index), getVer(int, "srcs", index), index, ltype);
+    for (let index = startchar; index < chars; index++) {
+        new Character(getVer(int, "names", index), getVer(int, "descriptions", index), getVer(int, "srcs", index), index, ltype);
     }
 }
 
 function preGen() {
-    generate(5, "Beats", int);
-    generate(5, "Effects", int);
-    generate(5, "Melodies", int);
-    generate(5, "Voices", int);
+    generate(0, 5, "Beats", int);
+    generate(5, 5, "Effects", int);
+    generate(10, 5, "Melodies", int);
+    generate(15, 5, "Voices", int);
 
-    // generate(5, "Extras", int);
+    // generate(20, 5, "Extras", int);
 }
 
 function byID(id) {
