@@ -82,7 +82,7 @@ class Character {
         img.style.marginTop = "10px";
         container.appendChild(img);
 
-        if (!Array.from(document.getElementsByName(i)).length > 1) {
+        if (!Array.from(document.getElementsByName(`${i}`)).length > 1) {
             let btn = document.createElement("button");
             btn.className = "btn_a";
             btn.id = this.name;
