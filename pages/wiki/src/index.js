@@ -183,26 +183,113 @@ function getVer(_version, _var, index) {
     }
 }
 
-function generate(startchar, chars, ltype, version, mode) {
-    // version index
-    let l = int;
-
-    // swipe previous instance
-    clear();
-
-    // generate more
-    for (let index = startchar; index < chars; index++) {
-        new Character(getVer(int, "names", index), getVer(int, "descriptions", index), getVer(int, "srcs", index), index, ltype);
-    }
-}
-
 function preGen() {
-    generate(0, 5, "Beats", int);
-    generate(5, 5, "Effects", int);
-    generate(10, 5, "Melodies", int);
-    generate(15, 5, "Voices", int);
+    new Character(
+        getVer(int, "names", 0), 
+        getVer(int, "descriptions", 0), 
+        getVer(int, "srcs", 0), 0, "Beats"
+    );
+    new Character(
+        getVer(int, "names", 1), 
+        getVer(int, "descriptions", 1), 
+        getVer(int, "srcs", 1), 1, "Beats"
+    );
+    new Character(
+        getVer(int, "names", 2), 
+        getVer(int, "descriptions", 2), 
+        getVer(int, "srcs", 2), 2, "Beats"
+    );
+    new Character(
+        getVer(int, "names", 3), 
+        getVer(int, "descriptions", 3), 
+        getVer(int, "srcs", 3), 3, "Beats"
+    );
+    new Character(
+        getVer(int, "names", 4), 
+        getVer(int, "descriptions", 4), 
+        getVer(int, "srcs", 4), 4, "Beats"
+    );
+    
 
-    // generate(20, 5, "Extras", int);
+    new Character(
+        getVer(int, "names", 5), 
+        getVer(int, "descriptions", 5), 
+        getVer(int, "srcs", 5), 5, "Effects"
+    );
+    new Character(
+        getVer(int, "names", 6), 
+        getVer(int, "descriptions", 6), 
+        getVer(int, "srcs", 6), 6, "Effects"
+    );
+    new Character(
+        getVer(int, "names", 7), 
+        getVer(int, "descriptions", 7), 
+        getVer(int, "srcs", 7), 7, "Effects"
+    );
+    new Character(
+        getVer(int, "names", 8), 
+        getVer(int, "descriptions", 8), 
+        getVer(int, "srcs", 8), 8, "Effects"
+    );
+    new Character(
+        getVer(int, "names", 9), 
+        getVer(int, "descriptions", 9), 
+        getVer(int, "srcs", 9), 9, "Effects"
+    );
+    
+
+    new Character(
+        getVer(int, "names", 10), 
+        getVer(int, "descriptions", 10), 
+        getVer(int, "srcs", 10), 10, "Melodies"
+    );
+    new Character(
+        getVer(int, "names", 11), 
+        getVer(int, "descriptions", 11), 
+        getVer(int, "srcs", 11), 11, "Melodies"
+    );
+    new Character(
+        getVer(int, "names", 12), 
+        getVer(int, "descriptions", 12), 
+        getVer(int, "srcs", 12), 12, "Melodies"
+    );
+    new Character(
+        getVer(int, "names", 13), 
+        getVer(int, "descriptions", 13), 
+        getVer(int, "srcs", 13), 13, "Melodies"
+    );
+    new Character(
+        getVer(int, "names", 14), 
+        getVer(int, "descriptions", 14), 
+        getVer(int, "srcs", 14), 14, "Melodies"
+    );
+    
+
+    new Character(
+        getVer(int, "names", 14), 
+        getVer(int, "descriptions", 14), 
+        getVer(int, "srcs", 14), 14, "Voices"
+    );
+    new Character(
+        getVer(int, "names", 15), 
+        getVer(int, "descriptions", 16), 
+        getVer(int, "srcs", 16), 16, "Voices"
+    );
+    new Character(
+        getVer(int, "names", 17), 
+        getVer(int, "descriptions", 17), 
+        getVer(int, "srcs", 17), 17, "Voices"
+    );
+    new Character(
+        getVer(int, "names", 18), 
+        getVer(int, "descriptions", 18), 
+        getVer(int, "srcs", 18), 18, "Voices"
+    );
+    new Character(
+        getVer(int, "names", 19), 
+        getVer(int, "descriptions", 19), 
+        getVer(int, "srcs", 19), 19, "Voices"
+    );
 }
 
 function byID(id) {
