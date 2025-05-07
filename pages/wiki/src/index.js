@@ -17,17 +17,17 @@ class Chars {
     constructor() {
         const charPrefix = "imgs/Characters/";
         this.names = [
-            ["Duggie","Reverse","Inverse","Splitcase","Noah T.","Div","Lu","Fierce","Hinge","Calling","Vase","Jason","Vivisection","Nihility","Zenith","Gelica","Null","David J","Spite","Melancholy"],
-            ["Duggie","Reverse","Inverse","Splitcase","Noah T.","Div","Lu","Fierce","Hinge","Calling","Vase","Jason","Vivisection","Nihility","Zenith","Gelica","Null","David J","Spite","Melancholy"]
+            ["Duggie", "Reverse", "Inverse", "Splitcase", "Noah T.", "Div", "Lu", "Fierce", "Hinge", "Calling", "Vase", "Jason", "Vivisection", "Nihility", "Zenith", "Gelica", "Null", "David J", "Spite", "Melancholy"],
+            ["Duggie", "Reverse", "Inverse", "Splitcase", "Noah T.", "Div", "Lu", "Fierce", "Hinge", "Calling", "Vase", "Jason", "Vivisection", "Nihility", "Zenith", "Gelica", "Null", "David J", "Spite", "Melancholy"]
         ],
-        this.descriptions = [
-            ["Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder"],
-            ["Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder"]
-        ],
-        this.srcs = [
-            [`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`],
-            [`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`,`${charPrefix}Placeholder.png`]
-        ]
+            this.descriptions = [
+                ["Placeholder", "Placeholder", "Placeholder", "Placeholder", "Placeholder", "Placeholder", "Placeholder", "Placeholder", "Placeholder", "Placeholder", "Placeholder", "Placeholder", "Placeholder", "Placeholder", "Placeholder", "Placeholder", "Placeholder", "Placeholder", "Placeholder", "Placeholder"],
+                ["Placeholder", "Placeholder", "Placeholder", "Placeholder", "Placeholder", "Placeholder", "Placeholder", "Placeholder", "Placeholder", "Placeholder", "Placeholder", "Placeholder", "Placeholder", "Placeholder", "Placeholder", "Placeholder", "Placeholder", "Placeholder", "Placeholder", "Placeholder"]
+            ],
+            this.srcs = [
+                [`${charPrefix}Placeholder.png`, `${charPrefix}Placeholder.png`, `${charPrefix}Placeholder.png`, `${charPrefix}Placeholder.png`, `${charPrefix}Placeholder.png`, `${charPrefix}Placeholder.png`, `${charPrefix}Placeholder.png`, `${charPrefix}Placeholder.png`, `${charPrefix}Placeholder.png`, `${charPrefix}Placeholder.png`, `${charPrefix}Placeholder.png`, `${charPrefix}Placeholder.png`, `${charPrefix}Placeholder.png`, `${charPrefix}Placeholder.png`, `${charPrefix}Placeholder.png`, `${charPrefix}Placeholder.png`, `${charPrefix}Placeholder.png`, `${charPrefix}Placeholder.png`, `${charPrefix}Placeholder.png`, `${charPrefix}Placeholder.png`],
+                [`${charPrefix}Placeholder.png`, `${charPrefix}Placeholder.png`, `${charPrefix}Placeholder.png`, `${charPrefix}Placeholder.png`, `${charPrefix}Placeholder.png`, `${charPrefix}Placeholder.png`, `${charPrefix}Placeholder.png`, `${charPrefix}Placeholder.png`, `${charPrefix}Placeholder.png`, `${charPrefix}Placeholder.png`, `${charPrefix}Placeholder.png`, `${charPrefix}Placeholder.png`, `${charPrefix}Placeholder.png`, `${charPrefix}Placeholder.png`, `${charPrefix}Placeholder.png`, `${charPrefix}Placeholder.png`, `${charPrefix}Placeholder.png`, `${charPrefix}Placeholder.png`, `${charPrefix}Placeholder.png`, `${charPrefix}Placeholder.png`]
+            ]
     }
 }
 
@@ -41,94 +41,94 @@ class Elem {
 
 class Character {
     constructor(name, description, imageSrc, _index) {
-      if (!name || !description || !imageSrc) {
-        console.error("All parameters (name, description, imageSrc) are required.");
-        return;
-      }
-  
-      this.name = name;
-      this.description = description;
-      this.imageSrc = imageSrc;
-  
-      this.render(_index);
-    }
-  
-    render(i) {
-      let container = document.createElement("div");
-      container.className = "char";
-      container.style.border = "2px solid #333";
-      container.style.padding = "15px";
-      container.style.marginTop = "20px";
-      container.style.maxWidth = "200px";
-      container.style.fontFamily = "Arial, sans-serif";
-  
-      // Name
-      let title = document.createElement("h3");
-      title.textContent = this.name;
-      container.appendChild(title);
-  
-      // Description
-      let desc = document.createElement("p");
-      desc.textContent = this.description;
-      container.appendChild(desc);
-  
-      // Image
-      let img = document.createElement("img");
-      img.src = this.imageSrc;
-      img.alt = "Character Image";
-      img.style.maxWidth = "50px";
-      img.style.height = "auto";
-      img.style.border = "1px solid #ccc";
-      img.style.marginTop = "10px";
-      container.appendChild(img);
+        if (!name || !description || !imageSrc) {
+            console.error("All parameters (name, description, imageSrc) are required.");
+            return;
+        }
 
-      if (!Array.from(document.getElementsByName(i)).length > 1) {
-        let btn = document.createElement("button");
-        btn.className = "btn_a";
-        btn.id = this.name;
-        btn.name = i;
-        btn.appendChild(container);
-  
-        if (clamp(i, 4, 0)) {
-          document.getElementById("beats").appendChild(btn); 
-          document.getElementById("beats_label").innerHTML = "Beats";
-  
-          return;
+        this.name = name;
+        this.description = description;
+        this.imageSrc = imageSrc;
+
+        this.render(_index);
+    }
+
+    render(i) {
+        let container = document.createElement("div");
+        container.className = "char";
+        container.style.border = "2px solid #333";
+        container.style.padding = "15px";
+        container.style.marginTop = "20px";
+        container.style.maxWidth = "200px";
+        container.style.fontFamily = "Arial, sans-serif";
+
+        // Name
+        let title = document.createElement("h3");
+        title.textContent = this.name;
+        container.appendChild(title);
+
+        // Description
+        let desc = document.createElement("p");
+        desc.textContent = this.description;
+        container.appendChild(desc);
+
+        // Image
+        let img = document.createElement("img");
+        img.src = this.imageSrc;
+        img.alt = "Character Image";
+        img.style.maxWidth = "50px";
+        img.style.height = "auto";
+        img.style.border = "1px solid #ccc";
+        img.style.marginTop = "10px";
+        container.appendChild(img);
+
+        if (!Array.from(document.getElementsByName(i)).length > 1) {
+            let btn = document.createElement("button");
+            btn.className = "btn_a";
+            btn.id = this.name;
+            btn.name = i;
+            btn.appendChild(container);
+
+            if (clamp(i, 4, 0)) {
+                document.getElementById("beats").appendChild(btn);
+                document.getElementById("beats_label").innerHTML = "Beats";
+
+                return;
+            }
+            if (clamp(i, 9, 5)) {
+                document.getElementById("effects").appendChild(btn);
+                document.getElementById("effects_label").innerHTML = "Effects";
+
+                return;
+            }
+            if (clamp(i, 14, 10)) {
+                document.getElementById("melodies").appendChild(btn);
+                document.getElementById("melodies_label").innerHTML = "Melodies";
+
+                return;
+            }
+            if (clamp(i, 19, 15)) {
+                document.getElementById("voices").appendChild(btn);
+                document.getElementById("voices_label").innerHTML = "Voices";
+
+                return;
+            }
+            if (clamp(i, 24, 20)) {
+                document.getElementById("extras").appendChild(btn);
+                document.getElementById("extras_label").innerHTML = "Extras";
+
+                return;
+            }
+        } else {
+            return;
         }
-        if (clamp(i, 9, 5)) {
-          document.getElementById("effects").appendChild(btn); 
-          document.getElementById("effects_label").innerHTML = "Effects";
-  
-          return;
-        }
-        if (clamp(i, 14, 10)) {
-          document.getElementById("melodies").appendChild(btn); 
-          document.getElementById("melodies_label").innerHTML = "Melodies";
-  
-          return;
-        }
-        if (clamp(i, 19, 15)) {
-          document.getElementById("voices").appendChild(btn); 
-          document.getElementById("voices_label").innerHTML = "Voices";
-  
-          return;
-        }
-        if (clamp(i, 24, 20)) {
-          document.getElementById("extras").appendChild(btn); 
-          document.getElementById("extras_label").innerHTML = "Extras";
-  
-          return;
-        }
-      } else {
-        return;
-      }
     }
 }
 
 class Tab {
     constructor(options, id, container) {
         this.select = new Elem("select");
-        
+
         if (id !== null || id !== undefined || id !== "") {
             this.select.id = id;
         }
@@ -162,16 +162,16 @@ function getVer(_version, _var, index) {
     switch (_var) {
         case "names":
             return c.names[_version][index];
-        break;
+            break;
 
         case "descriptions":
             return c.descriptions[_version][index];
-        break;
+            break;
 
         case "srcs":
-            return c.srcs[_version][index];       
-        break;
-        
+            return c.srcs[_version][index];
+            break;
+
         default:
             throw error("No variable was found. try 'names' 'descriptions' or 'srcs'");
             break;
@@ -188,7 +188,7 @@ function generate(chars, version, mode) {
     // generate more
     for (let index = 0; index < chars; index++) {
         let x = new Character(getVer(int, "names", index), getVer(int, "descriptions", index), getVer(int, "srcs", index), index);
-    }       
+    }
 }
 
 function byID(id) {
@@ -201,7 +201,7 @@ function clear() {
     Array.from(a.childNodes).forEach(element => {
         if (!Array.from(a.getElementsByClassName("avoid")).includes(element)) {
             a.removeChild(element);
-        }                
+        }
     });
 }
 
@@ -227,10 +227,10 @@ function update(version) {
 
             generate(20, "fale2");
             break;
-    
+
         default:
             int = 0;
-            
+
             ver1.enabled = false;
             ver2.enabled = true;
 
