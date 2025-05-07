@@ -196,6 +196,15 @@ function generate(chars, ltype, version, mode) {
     }
 }
 
+function preGen() {
+    generate(5, "Beats", int);
+    generate(5, "Effects", int);
+    generate(5, "Melodies", int);
+    generate(5, "Voices", int);
+
+    // generate(5, "Extras", int);
+}
+
 function byID(id) {
     return getElementById(id);
 }
@@ -259,11 +268,4 @@ ver2.addEventListener("click", () => {
 
 int = 1;
 
-function preGen() {
-    generate(5, "Beats", int);
-    generate(5, "Effects", int);
-    generate(5, "Melodies", int);
-    generate(5, "Voices", int);
-
-    // generate(5, "Extras", int);
-}
+preGen();
