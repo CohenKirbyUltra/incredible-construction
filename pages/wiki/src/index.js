@@ -39,16 +39,53 @@ class Elem {
     }
 }
 
+var t1 = ["beats", "effects", "melodies", "voices", "extras"];
+
+var t2 = ["Beats", "Effects", "Melodies", "Voices", "Extras"];
+
 class Character {
-    constructor(name, description, imageSrc, _index) {
-        if (!name || !description || !imageSrc) {
-            console.error("All parameters (name, description, imageSrc) are required.");
+    constructor(name, description, imageSrc, _index, _type) {
+        if (!name || !description || !imageSrc || !_type) {
+            console.error("All parameters (name, description, imageSrc, ..._type) are required.");
             return;
         }
 
         this.name = name;
         this.description = description;
         this.imageSrc = imageSrc;
+
+        switch (_type) {
+            case "Beats":
+                this.type = "beat";
+                this.type_label = "Beats";
+
+                break;
+            case "Effects":
+                this.type = "effect";
+                this.type_label = "Effects";
+
+                break;
+            case "Melodies":
+                this.type = "melodie";
+                this.type_label = "Melodies";
+
+                break;
+            case "Voices":
+                this.type = "voice";
+                this.type_label = "Voices";
+
+                break;
+            case "Extras":
+                this.type = "extra";
+                this.type_label = "Extras";
+
+                break;
+
+
+            default:
+                console.error("Invalid type in class: Character");
+                return;
+        }
 
         this.render(_index);
     }
@@ -82,46 +119,14 @@ class Character {
         img.style.marginTop = "10px";
         container.appendChild(img);
 
-        if (!Array.from(document.getElementsByName(`${i}`)).length > 1) {
-            let btn = document.createElement("button");
-            btn.className = "btn_a";
-            btn.id = this.name;
-            btn.name = i;
-            btn.appendChild(container);
+        let btn = document.createElement("button");
+        btn.className = "btn_a";
+        btn.id = this.name;
+        btn.name = i;
+        btn.appendChild(container);
 
-            if (clamp(i, 4, 0)) {
-                document.getElementById("beats").appendChild(btn);
-                document.getElementById("beats_label").innerHTML = "Beats";
-
-                return;
-            }
-            if (clamp(i, 9, 5)) {
-                document.getElementById("effects").appendChild(btn);
-                document.getElementById("effects_label").innerHTML = "Effects";
-
-                return;
-            }
-            if (clamp(i, 14, 10)) {
-                document.getElementById("melodies").appendChild(btn);
-                document.getElementById("melodies_label").innerHTML = "Melodies";
-
-                return;
-            }
-            if (clamp(i, 19, 15)) {
-                document.getElementById("voices").appendChild(btn);
-                document.getElementById("voices_label").innerHTML = "Voices";
-
-                return;
-            }
-            if (clamp(i, 24, 20)) {
-                document.getElementById("extras").appendChild(btn);
-                document.getElementById("extras_label").innerHTML = "Extras";
-
-                return;
-            }
-        } else {
-            return;
-        }
+        document.getElementById(this.type).appendChild(btn);
+        document.getElementById(`${this.type}s_label`).innerHTML = this.type_label;
     }
 }
 
@@ -178,7 +183,7 @@ function getVer(_version, _var, index) {
     }
 }
 
-function generate(chars, version, mode) {
+function generate(chars, ltype, version, mode) {
     // version index
     let l = int;
 
@@ -187,7 +192,7 @@ function generate(chars, version, mode) {
 
     // generate more
     for (let index = 0; index < chars; index++) {
-        let x = new Character(getVer(int, "names", index), getVer(int, "descriptions", index), getVer(int, "srcs", index), index);
+        let x = new Character(getVer(int, "names", index), getVer(int, "descriptions", index), getVer(int, "srcs", index), index, ltype);
     }
 }
 
@@ -215,7 +220,7 @@ function update(version) {
 
             title.innerHTML = "Fale 1";
 
-            generate(20, "fale1");
+            preGen();
             break;
         case 2:
             int = 1;
@@ -225,7 +230,7 @@ function update(version) {
 
             title.innerHTML = "Fale 2";
 
-            generate(20, "fale2");
+            preGen();
             break;
 
         default:
@@ -236,7 +241,7 @@ function update(version) {
 
             title.innerHTML = "Fale 1";
 
-            generate(20, "fale1");
+            preGen();
             break;
     }
 }
@@ -253,4 +258,12 @@ ver2.addEventListener("click", () => {
 
 
 int = 1;
-generate(20, int);
+
+function preGen() {
+    generate(5, "Beats", int);
+    generate(5, "Effects", int);
+    generate(5, "Melodies", int);
+    generate(5, "Voices", int);
+
+    // generate(5, "Extras", int);
+}
