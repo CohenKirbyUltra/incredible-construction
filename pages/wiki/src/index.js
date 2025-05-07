@@ -125,7 +125,7 @@ class Character {
         btn.name = i;
         btn.appendChild(container);
 
-        document.getElementById(this.type).appendChild(btn);
+        document.getElementById(this.type_label).appendChild(btn);
         document.getElementById(`${this.type}s_label`).innerHTML = this.type_label;
     }
 }
