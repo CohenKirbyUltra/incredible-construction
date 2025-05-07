@@ -292,6 +292,47 @@ function preGen() {
     );
 }
 
+function amountChars(div) {
+    let count = 0;
+    Array.prototype.from(document.getElementById("Beats").childNodes).forEach(element => {
+        if (element.className = "btn_a") {count++}
+    });
+
+    return count;
+}
+
+function clearExtras() {
+    if (amountChars("Beats") > 5) {
+        document.getElementById("Beats").removeChild(document.getElementById("Beats").childNodes[6]);
+        document.getElementById("Beats").removeChild(document.getElementById("Beats").childNodes[7]);
+        document.getElementById("Beats").removeChild(document.getElementById("Beats").childNodes[8]);
+        document.getElementById("Beats").removeChild(document.getElementById("Beats").childNodes[9]);
+        document.getElementById("Beats").removeChild(document.getElementById("Beats").childNodes[10]);
+    }
+    if (amountChars("Effects") > 5) {
+        document.getElementById("Effects").removeChild(document.getElementById("Effects").childNodes[6]);
+        document.getElementById("Effects").removeChild(document.getElementById("Effects").childNodes[7]);
+        document.getElementById("Effects").removeChild(document.getElementById("Effects").childNodes[8]);
+        document.getElementById("Effects").removeChild(document.getElementById("Effects").childNodes[9]);
+        document.getElementById("Effects").removeChild(document.getElementById("Effects").childNodes[10]);
+    }
+    if (amountChars("Melodies") > 5) {
+        document.getElementById("Melodies").removeChild(document.getElementById("Melodies").childNodes[6]);
+        document.getElementById("Melodies").removeChild(document.getElementById("Melodies").childNodes[7]);
+        document.getElementById("Melodies").removeChild(document.getElementById("Melodies").childNodes[8]);
+        document.getElementById("Melodies").removeChild(document.getElementById("Melodies").childNodes[9]);
+        document.getElementById("Melodies").removeChild(document.getElementById("Melodies").childNodes[10]);
+    }
+    if (amountChars("Voices") > 5) {
+        document.getElementById("Voices").removeChild(document.getElementById("Voices").childNodes[6]);
+        document.getElementById("Voices").removeChild(document.getElementById("Voices").childNodes[7]);
+        document.getElementById("Voices").removeChild(document.getElementById("Voices").childNodes[8]);
+        document.getElementById("Voices").removeChild(document.getElementById("Voices").childNodes[9]);
+        document.getElementById("Voices").removeChild(document.getElementById("Voices").childNodes[10]);
+    }
+    
+}
+
 function byID(id) {
     return getElementById(id);
 }
