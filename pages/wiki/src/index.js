@@ -294,7 +294,7 @@ function preGen() {
 
 function amountChars(div) {
     let count = 0;
-    Array.prototype.from(document.getElementById("Beats").childNodes).forEach(element => {
+    Array.from(document.getElementById(div).childNodes).forEach(element => {
         if (element.className = "btn_a") {count++}
     });
 
