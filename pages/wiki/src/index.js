@@ -85,6 +85,7 @@ class Character {
       let btn = document.createElement("button");
       btn.className = "btn_a";
       btn.id = this.name;
+      btn.name = i;
       btn.appendChild(container);
 
       if (clamp(i, 4, 0)) {
