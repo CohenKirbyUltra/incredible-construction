@@ -90,22 +90,32 @@ class Character {
       if (clamp(i, 4, 0)) {
         document.getElementById("beats").appendChild(btn); 
         document.getElementById("beats_label").innerHTML = "Beats";
+
+        return;
       }
       if (clamp(i, 9, 5)) {
         document.getElementById("effects").appendChild(btn); 
         document.getElementById("effects_label").innerHTML = "Effects";
+
+        return;
       }
       if (clamp(i, 14, 10)) {
         document.getElementById("melodies").appendChild(btn); 
         document.getElementById("melodies_label").innerHTML = "Melodies";
+
+        return;
       }
       if (clamp(i, 19, 15)) {
         document.getElementById("voices").appendChild(btn); 
         document.getElementById("voices_label").innerHTML = "Voices";
+
+        return;
       }
       if (clamp(i, 24, 20)) {
         document.getElementById("extras").appendChild(btn); 
         document.getElementById("extras_label").innerHTML = "Extras";
+
+        return;
       }
     }
 }
