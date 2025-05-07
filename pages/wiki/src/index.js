@@ -76,7 +76,7 @@ class Character {
       let img = document.createElement("img");
       img.src = this.imageSrc;
       img.alt = "Character Image";
-      img.style.maxWidth = "50%";
+      img.style.maxWidth = "50px";
       img.style.height = "auto";
       img.style.border = "1px solid #ccc";
       img.style.marginTop = "10px";
@@ -87,6 +87,10 @@ class Character {
       btn.id = this.name;
       btn.name = i;
       btn.appendChild(container);
+
+      if (document.getElementsByName(i).length > 1) {
+        return;
+      }
 
       if (clamp(i, 4, 0)) {
         document.getElementById("beats").appendChild(btn); 
